@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "product": "专家方法论",
+        "features": "专家生态",
+        "solutions": "赋能教练",
+        "pricing": "规模化成功",
+        "tryFree": "开启辅导"
+    },
+    "experience": {
+        "title": "体验顶级专家逻辑",
+        "subtitle": "专为个人专家打造。在下方测试我们的 AI 引擎。",
+        "tabCoach": "导师模拟器",
+        "tabNail": "专家引擎",
+        "coachGreeting": "我是你的 AI 导师。我整合了全球顶尖成交专家的集体智慧。请告诉我你的愿景。",
+        "coachFeedback": "标准的话术。但你是在用逻辑引导，而非情感。高净值成交者解决的是'痛苦'。再试一次，重点关注不采取行动的代价。",
+        "inputPlaceholder": "与你的导师对话...",
+        "nailPlaceholder": "在此粘贴会议纪要或原始数据...",
+        "analyzeBtn": "合成专家剧本",
+        "nailEmptyState": "正在分析专家级数据结构...",
+        "analysisComplete": "逻辑图谱生成完毕",
+        "nailResult": "专家置信度评分",
+        "signupTitle": "捕获你的灵感",
+        "signupDesc": "将此逻辑流保存到你的个人面板，规模化你的教学方法体系。",
+        "emailPlaceholder": "工作邮箱",
+        "passwordPlaceholder": "安全密码",
+        "createAccount": "获取专家访问权限",
+        "freeTrialNote": "包含 14 天高级功能体验。"
+    },
+    "hero": {
+        "title": "专为销售专家打造的首个 AI 架构",
+        "subtitle": "停止用时间换金钱。利用像你一样思考、成交和辅导的 AI 引擎，实现专业能力的规模化复制。",
+        "cta": "探索 LongArena",
+        "ctaSecondary": "立即体验 Demo",
+        "badge": "2026 全球专家版发布"
+    },
+    "features": {
+        "title": "我们如何成就专家",
+        "simulation": "逻辑复制",
+        "simulationDesc": "数字化你的独特销售方法论，让你有能力同时辅导数以百万计的学员。",
+        "smartPage": "视觉权威",
+        "smartPageDesc": "将零散笔记转化为高权威的视觉提案，赢得决策层的尊重。",
+        "fab": "社交圈层影响力",
+        "fabDesc": "精准自动化的社交媒体叙事，在 LinkedIn 和 X 上放大你的专家声量。"
+    },
+    "success": {
+        "title": "掌控全球市场",
+        "subtitle": "受全球顶级咨询专家与规模化企业教练的信赖。",
+        "stat1": "胜率增速",
+        "stat2": "营收影响",
+        "case1": "Premium Tech Partner",
+        "case1Desc": "在 30 天内将其专家主导的教练项目规模化至 1,200 名参与者。",
+        "case2": "Global Strategy Firm",
+        "case2Desc": "自动化其'执行简报'生成，每笔订单节省 20 小时精力和时间。"
+    }
+}

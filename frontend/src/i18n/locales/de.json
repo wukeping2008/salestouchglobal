@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "product": "Produkt",
+        "features": "Funktionen",
+        "solutions": "Lösungen",
+        "pricing": "Preise",
+        "tryFree": "Kostenlos testen"
+    },
+    "experience": {
+        "title": "Erleben Sie die Logik",
+        "subtitle": "Keine Kreditkarte erforderlich. Testen Sie unsere KI-Engine jetzt.",
+        "tabCoach": "Sales Coach Simulator",
+        "tabNail": "SalesNail Engine",
+        "coachGreeting": "Hallo! Ich bin dein KI-Coach. Präsentiere mir dein Produkt in einem Satz.",
+        "coachFeedback": "Guter Anfang. Sie haben sich jedoch zu sehr auf Funktionen konzentriert. Können Sie das umformulieren, um sich auf den 'Schmerz' zu konzentrieren, den Sie lösen?",
+        "inputPlaceholder": "Geben Sie hier Ihren Pitch ein...",
+        "nailPlaceholder": "Fügen Sie hier Ihre groben Besprechungsnotizen ein...",
+        "analyzeBtn": "Smart Page erstellen",
+        "nailEmptyState": "Warten auf Eingabedaten...",
+        "analysisComplete": "Analyse abgeschlossen",
+        "nailResult": "Deal Velocity Score",
+        "signupTitle": "Fortschritt speichern",
+        "signupDesc": "Erstellen Sie ein kostenloses Konto, um die vollständige Analyse zu sehen und das Coaching fortzusetzen.",
+        "emailPlaceholder": "Arbeits-E-Mail",
+        "passwordPlaceholder": "Passwort",
+        "createAccount": "Kostenloses Konto erstellen",
+        "freeTrialNote": "14-tägige kostenlose Testversion der Pro-Funktionen enthalten."
+    },
+    "hero": {
+        "title": "Entfesseln Sie Ihr Potenzial mit dem weltweit ersten KI-Sales-Coach",
+        "subtitle": "Treten Sie dem Elite-Kreis bei. Meistern Sie die Kunst des Abschlusses mit einem Coach, der wie ein Top-Performer denkt.",
+        "cta": "SalesTouch erkunden",
+        "ctaSecondary": "SalesNail erkunden",
+        "badge": "Global Launch • 4-Wochen Transformation"
+    },
+    "features": {
+        "title": "Warum einen KI-Coach wählen?",
+        "simulation": "Echte Logik",
+        "simulationDesc": "Trainiert auf der tatsächlichen Logik zum Abschluss von Deals globaler Top-Vertriebsleiter.",
+        "smartPage": "Visuelle Dominanz",
+        "smartPageDesc": "Erstellen Sie Assets, die in jedem Sitzungssaal Aufmerksamkeit erregen.",
+        "fab": "Social Network Explosion",
+        "fabDesc": "Nutzen Sie die Kraft Ihres professionellen Netzwerks mit präzisen Botschaften."
+    },
+    "success": {
+        "title": "Erfolgsgeschichten aus dem Coaching-Labor",
+        "subtitle": "Sehen Sie, wie Unternehmen sich mit unserem KI-Sales-Coach transformieren.",
+        "stat1": "Gewinnrate",
+        "stat2": "Deal-Größe",
+        "case1": "TechGiant Corp",
+        "case1Desc": "Steigerung der Effizienz ihres Enterprise-Vertriebsteams um 300 % in 4 Wochen.",
+        "case2": "FinServe Global",
+        "case2Desc": "Abschluss von 3 großen Deals mit der Smart One-Page-Methodik."
+    }
+}

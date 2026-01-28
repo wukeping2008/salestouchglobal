@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "product": "Producto",
+        "features": "Características",
+        "solutions": "Soluciones",
+        "pricing": "Precios",
+        "tryFree": "Prueba Gratis"
+    },
+    "experience": {
+        "title": "Experimenta la Lógica",
+        "subtitle": "Sin tarjeta de crédito. Prueba nuestro motor de IA ahora mismo.",
+        "tabCoach": "Simulador de Coach de Ventas",
+        "tabNail": "Motor SalesNail",
+        "coachGreeting": "¡Hola! Soy tu Coach de IA. Preséntame tu producto en una frase.",
+        "coachFeedback": "Buen comienzo. Sin embargo, te enfocaste demasiado en las características. ¿Puedes reformularlo para enfocarte en el 'dolor' que resuelves?",
+        "inputPlaceholder": "Escribe tu propuesta aquí...",
+        "nailPlaceholder": "Pega tus notas de reunión aquí...",
+        "analyzeBtn": "Generar Smart Page",
+        "nailEmptyState": "Esperando datos de entrada...",
+        "analysisComplete": "Análisis Completado",
+        "nailResult": "Puntuación de Velocidad del Deal",
+        "signupTitle": "Guarda tu Progreso",
+        "signupDesc": "Crea una cuenta gratuita para ver el análisis completo y continuar con el coaching.",
+        "emailPlaceholder": "Correo electrónico de trabajo",
+        "passwordPlaceholder": "Contraseña",
+        "createAccount": "Crear Cuenta Gratis",
+        "freeTrialNote": "Incluye una prueba gratuita de 14 días en las funciones Pro."
+    },
+    "hero": {
+        "title": "Desata tu potencial con el primer Coach de Ventas de IA del mundo",
+        "subtitle": "Únete al círculo de élite. Domina el arte de cerrar tratos con un coach que piensa como un alto ejecutivo.",
+        "cta": "Explora SalesTouch",
+        "ctaSecondary": "Explora SalesNail",
+        "badge": "Lanzamiento Global • Transformación de 4 Semanas"
+    },
+    "features": {
+        "title": "¿Por qué elegir un Coach de IA?",
+        "simulation": "Lógica Real",
+        "simulationDesc": "Entrenado en la lógica real de cierre de tratos de los mejores líderes de ventas globales.",
+        "smartPage": "Dominio Visual",
+        "smartPageDesc": "Crea activos que exijan atención en cualquier sala de juntas.",
+        "fab": "Explosión de Redes Sociales",
+        "fabDesc": "Aprovecha el poder de tu red profesional con mensajes de precisión."
+    },
+    "success": {
+        "title": "Historias de éxito del laboratorio de coaching",
+        "subtitle": "Mira cómo las empresas se están transformando con nuestro AI Sales Coach.",
+        "stat1": "Tasa de Éxito",
+        "stat2": "Tamaño del Deal",
+        "case1": "TechGiant Corp",
+        "case1Desc": "Escalaron la eficiencia de su equipo de ventas empresariales en un 300% en 4 semanas.",
+        "case2": "FinServe Global",
+        "case2Desc": "Cerraron 3 tratos importantes utilizando la metodología Smart One-Page."
+    }
+}

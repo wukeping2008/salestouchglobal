@@ -1,0 +1,50 @@
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const app = express();
+const port = process.env.PORT || 3100;
+
+app.use(cors());
+app.use(express.json());
+
+// Basic health check
+app.get('/api/health', (req, res) => {
+    res.json({
+        status: 'healthy',
+        region: 'North America (Global)',
+        provider: process.env.AI_PROVIDER || 'mock'
+    });
+});
+
+// Mock AI Endpoint for Landing Page / Simulation
+app.post('/api/ai/simulate', async (req, res) => {
+    const { message, context } = req.body;
+    const provider = process.env.AI_PROVIDER || 'mock';
+
+    console.log(`Processing request with provider: ${provider}`);
+
+    // In a real scenario, we'd call Azure OpenAI or Claude here
+    if (provider === 'mock') {
+        res.json({
+            reply: `[AI Sales Coach]: I see you're working on the ${context?.industry || 'Unknown'} sector. Based on the SPIN method, your next question should focus on the "Implication" of their current manual process.`,
+            suggestions: [
+                "Ask about resource drain",
+                "Ask about missed opportunity costs",
+                "Pivot to need-payoff"
+            ]
+        });
+    } else {
+        // Placeholder for real AI integration
+        res.json({
+            reply: `[AI Sales Coach (${provider})]: Analysis in progress. Connect your API keys to see real-time logic.`,
+            suggestions: ["Check API configuration"]
+        });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`SalesTouch Overseas Backend running on http://localhost:${port}`);
+});

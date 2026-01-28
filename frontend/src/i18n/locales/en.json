@@ -1,0 +1,55 @@
+{
+    "nav": {
+        "product": "Our Method",
+        "features": "Expert Ecosystem",
+        "solutions": "For Coaches",
+        "pricing": "Scale Your Success",
+        "tryFree": "Start Coaching"
+    },
+    "experience": {
+        "title": "Experience the Alpha Logic",
+        "subtitle": "Built for individual experts. Test our engine below.",
+        "tabCoach": "Mentor Simulator",
+        "tabNail": "Expert Engine",
+        "coachGreeting": "I'm your AI Mentor. I possess the collective intelligence of the top 1% closing experts. Pitch me your vision.",
+        "coachFeedback": "A standard pitch. However, you're leading with logic, not emotion. High-ticket closers solve 'Pain'. Try again, focus on the cost of inaction.",
+        "inputPlaceholder": "Speak to your mentor...",
+        "nailPlaceholder": "Paste raw data or meeting transcripts here...",
+        "analyzeBtn": "Synthesize Success Page",
+        "nailEmptyState": "Analyzing expert-level data structure...",
+        "analysisComplete": "Logic Map Complete",
+        "nailResult": "Expert Confidence Score",
+        "signupTitle": "Capture Your Brilliance",
+        "signupDesc": "Save this logic flow to your personal dashboard and scale your coaching methodology.",
+        "emailPlaceholder": "Work Email",
+        "passwordPlaceholder": "Secure Password",
+        "createAccount": "Unlock Expert Access",
+        "freeTrialNote": "14-day premium access included."
+    },
+    "hero": {
+        "title": "The First AI Architecture Built for Sales Experts",
+        "subtitle": "Stop trading time for money. Scale your sales expertise with an AI engine that thinks, closes, and coaches like you.",
+        "cta": "Explore LongArena",
+        "ctaSecondary": "Experience the Demo",
+        "badge": "2026 Global Expert Edition"
+    },
+    "features": {
+        "title": "How We Elevate the Expert",
+        "simulation": "Logic Duplication",
+        "simulationDesc": "We digitize your unique sales methodology, allowing you to coach millions simultaneously.",
+        "smartPage": "Visual Authority",
+        "smartPageDesc": "Transform rough notes into high-authority visual boards that command executive respect.",
+        "fab": "Network Influence",
+        "fabDesc": "Automate your social influence on LinkedIn and X with precision-targeted expert messaging."
+    },
+    "success": {
+        "title": "Master the Global Market",
+        "subtitle": "Trusted by elite consultants and scale-focused enterprise coaches.",
+        "stat1": "Velocity Gain",
+        "stat2": "Revenue Impact",
+        "case1": "Premium Tech Partner",
+        "case1Desc": "Scaled their expert-led coaching program to 1,200 participants in 30 days.",
+        "case2": "Global Strategy Firm",
+        "case2Desc": "Automated their 'Executive Briefing' generation, saving 20 hours per per deal."
+    }
+}
