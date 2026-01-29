@@ -1,0 +1,561 @@
+{
+  "hero": {
+    "headline": {
+      "version1": "The First AI Architecture Built for North American Sales Experts",
+      "version2": "Stop Trading Time for Money. Scale Your Sales Expertise with AI That Thinks, Closes, and Coaches Like You.",
+      "version3": "Double Your Deal Velocity with AI-Powered Sales Coaching",
+      "version4": "The #1 AI Sales Coach Platform in North America - Trusted by 500+ Enterprise Sales Teams",
+      "version5": "Transform Your Sales Process with AI: From Manual Chaos to Automated Excellence Across North America"
+    },
+    "subheadline": {
+      "main": "The First AI Platform Built Specifically for North American Sales Professionals - Enterprise-Grade AI Coaching That Understands American Buying Psychology and Regional Sales Patterns",
+      "supporting": "Join 500+ North American Sales Teams Who Have Doubled Their Deal Velocity, Increased Their Win Rate, and Scaled Their Coaching Methodology Using AI"
+    },
+    "trustBadges": {
+      "badge1": "🏆 #1 AI Sales Coach Platform in North America",
+      "badge2": "✅ 14-Day Free Trial - No Credit Card Required",
+      "badge3": "⭐ Trusted by 500+ North American Enterprise Sales Teams",
+      "badge4": "📈 300% Year-Over-Year Growth in North American Market",
+      "badge5": "🔒 SOC 2 Type II Certified for North American Enterprise Clients"
+    },
+    "cta": {
+      "primary": {
+        "text": "Start Free Trial",
+        "subtext": "14 days, no credit card required",
+        "icon": "🎯",
+        "urgency": "Limited time offer for North American sales leaders"
+      },
+      "secondary": {
+        "text": "Try Demo",
+        "subtext": "Interactive experience with our AI sales coach",
+        "icon": "🎮"
+      }
+    },
+    "socialProof": {
+      "enterpriseTeams": {
+        "value": "500+",
+        "label": "North American Enterprise Sales Teams",
+        "icon": "👥"
+      },
+      "g2Rating": {
+        "value": "4.9/5",
+        "label": "Average G2 Rating from North American Sales Professionals",
+        "icon": "⭐"
+      },
+      "marketPosition": {
+        "value": "#1",
+        "label": "Market Leader in AI Sales Coaching for North America",
+        "icon": "🏆"
+      },
+      "growthMetric": {
+        "value": "300%",
+        "label": "Year-Over-Year Growth in North American Market",
+        "icon": "📈"
+      }
+    },
+    "features": {
+      "title": "Why North American Sales Leaders Choose LongArena",
+      "subtitle": "Purpose-Built Features Designed Specifically for US and Canadian Sales Markets",
+      "features": [
+        {
+          "id": "roi",
+          "icon": "💰",
+          "title": "North American ROI Calculator",
+          "description": "Calculate your exact return on investment based on deal size, time saved, and revenue impact - using North American sales metrics and industry benchmarks for Technology, Healthcare, Finance, and other key sectors.",
+          "stat": "42% Average Increase in Deal Velocity",
+          "statSubtext": "Based on 500+ North American Sales Teams",
+          "cta": "Calculate Your ROI"
+        },
+        {
+          "id": "dashboard",
+          "icon": "📊",
+          "title": "North American Sales Dashboard",
+          "description": "Real-time metrics designed specifically for North American sales leaders: deal velocity by US region (Northeast, South, Midwest, West), win rate by state/province, average deal size by industry vertical, and quarter-over-quarter growth tracking aligned with North American fiscal quarters.",
+          "stat": "15x Velocity Gain Observed Across North American Teams",
+          "statSubtext": "Top performing teams in US and Canada",
+          "cta": "View Dashboard Demo"
+        },
+        {
+          "id": "aiCoach",
+          "icon": "🎯",
+          "title": "AI Coach with American English & Cultural Understanding",
+          "description": "Our AI has been trained on thousands of successful North American sales conversations and patterns. It understands American business culture, uses American idioms and expressions, and is familiar with American sales terminology, negotiation styles, and buying psychology. No translation feel whatsoever - 100% American English.",
+          "stat": "Top 1% Logic Accuracy for North American Sales",
+          "statSubtext": "Based on 100,000+ US and Canadian sales conversations analyzed",
+          "cta": "Try AI Coach Demo"
+        },
+        {
+          "id": "crm",
+          "icon": "💻",
+          "title": "Native CRM Integrations for North American Sales Stacks",
+          "description": "Seamless integration with CRMs that North American sales teams actually use - Salesforce, HubSpot, Microsoft Dynamics, Zoho CRM, and Pipedrive. Bi-directional sync, automatic opportunity scoring, and real-time data updates using North American time zones (Eastern, Central, Mountain, Pacific, Atlantic).",
+          "stat": "Salesforce, HubSpot, Dynamics, Zoho, Pipedrive Ready",
+          "statSubtext": "One-click setup, supported across US and Canada",
+          "cta": "View Integrations"
+        },
+        {
+          "id": "time",
+          "icon": "⏰",
+          "title": "Time-Saving for Busy North American Sales Leaders",
+          "description": "Automated territory planning, call preparation, opportunity scoring, proposal generation, and follow-up scheduling - saving North American sales professionals 20+ hours per quarter on administrative tasks. Time you can spend on building relationships with American and Canadian C-level executives and closing high-value enterprise deals.",
+          "stat": "20+ Hours/Quarter Saved for North American Sales Leaders",
+          "statSubtext": "Equivalent to $120,000+/year in productivity",
+          "cta": "Calculate Your Time Savings"
+        },
+        {
+          "id": "compliance",
+          "icon": "🇺🇸",
+          "title": "North American Data Protection & Compliance",
+          "description": "Fully compliant with North American data protection laws and regulations. CCPA compliant for California residents, GDPR ready for cross-border sales activities, SOC 2 Type II certified for enterprise clients, and compliant with Canadian PIPEDA and provincial privacy laws. Your sales data is stored in North American data centers with enterprise-grade security.",
+          "stat": "SOC 2 Type II & CCPA/GDPR Compliant",
+          "statSubtext": "Enterprise-grade security for US and Canadian clients",
+          "cta": "View Security & Compliance"
+        }
+      ]
+    },
+    "caseStudies": {
+      "title": "Success Stories from Across North America",
+      "subtitle": "Real Results from US and Canadian Companies Using LongArena",
+      "cases": [
+        {
+          "id": "case1",
+          "company": "TechCorp USA",
+          "industry": "Technology Enterprise",
+          "location": "San Francisco, California",
+          "logo": "🏢",
+          "dealSize": "$2.5M",
+          "timeSaved": "12 months",
+          "roi": "420%",
+          "story": "The Challenge: TechCorp USA's North American enterprise sales team was struggling with a 90-day average sales cycle, 20% conversion rate, manual territory planning, and lack of data-driven insights.\n\nThe Solution: Implemented LongArena's AI-powered territory optimization, automated opportunity scoring, real-time CRM integration, and AI-powered sales coaching modules.\n\nThe Results: Reduced sales cycle from 90 days to 52 days (-42% increase in deal velocity), increased conversion rate from 20% to 28% (+40% increase in win rate), generated $4.2M in additional revenue within the first year.\n\nTestimonial: \"SalesTouch transformed our North American enterprise sales operation. The AI-powered territory planning alone saved us 30 hours per quarter - that's $120K per year in productivity gains. The real-time opportunity scoring has been a game-changer for our team across the United States. The ROI is absolutely insane.\"",
+          "testimonialAuthor": "John Smith",
+          "testimonialTitle": "VP of Sales, TechCorp USA",
+          "testimonialImage": "👨‍💼"
+        },
+        {
+          "id": "case2",
+          "company": "HealthCare Plus Canada",
+          "industry": "Healthcare",
+          "location": "Toronto, Ontario, Canada",
+          "logo": "🏥",
+          "dealSize": "$850K CAD",
+          "timeSaved": "8 months",
+          "roi": "325%",
+          "story": "The Challenge: HealthCare Plus Canada's sales team was having difficulty adapting to the US healthcare market, lacked understanding of American healthcare buying patterns, and was struggling to close deals with American hospital administrators and decision-makers.\n\nThe Solution: Used LongArena's AI Coach to understand American healthcare sales methodology, adapted their Canadian sales approach to US market, and generated AI-powered sales pages specifically designed for American healthcare executives.\n\nThe Results: Went from $50K/month in coaching revenue to $200K/month in revenue within 6 months, adapted their sales strategy to better match US healthcare market expectations, achieved 325% ROI within first year.\n\nTestimonial: \"We went from struggling in the US market to closing deals consistently with American hospital administrators. SalesTouch's AI logic understands American healthcare buying patterns better than any tool we've used. It's not just translation - it's true cultural understanding.\"",
+          "testimonialAuthor": "Sarah Johnson",
+          "testimonialTitle": "Founder & CEO, HealthCare Plus Canada",
+          "testimonialImage": "👩‍💼"
+        },
+        {
+          "id": "case3",
+          "company": "FinTech Innovations Inc.",
+          "industry": "Financial Services",
+          "location": "New York, New York",
+          "logo": "🏦",
+          "dealSize": "$3.8M",
+          "timeSaved": "18 months",
+          "roi": "580%",
+          "story": "The Challenge: FinTech Innovations Inc.'s North American enterprise sales team was using manual processes for territory planning, opportunity scoring, and proposal generation. Sales representatives were spending 30+ hours per quarter on administrative tasks instead of building relationships with CFOs and treasurers.\n\nThe Solution: Implemented LongArena's SalesNail Smart Page Generator to automatically create professional sales landing pages from meeting notes, integrated with US and Canadian financial services CRMs, and set up AI-powered proposal generation.\n\nThe Results: Automated their \"Executive Briefing\" generation, saving 20 hours per deal, increasing proposal quality and consistency, achieving 580% ROI within first 18 months.\n\nTestimonial: \"SalesTouch's AI-powered territory planning and proposal generation has been absolutely transformative for our North American sales operation. We've become the fastest-growing fintech sales team in the Northeast United States.\"",
+          "testimonialAuthor": "Michael Davis",
+          "testimonialTitle": "Director of Sales Operations, FinTech Innovations Inc.",
+          "testimonialImage": "👨‍💼"
+        },
+        {
+          "id": "case4",
+          "company": "Enterprise Sales Co.",
+          "industry": "Sales Consulting & Training",
+          "location": "Chicago, Illinois",
+          "logo": "👥",
+          "dealSize": "$1.2M",
+          "timeSaved": "6 months",
+          "roi": "450%",
+          "story": "The Challenge: Enterprise Sales Co.'s team of North American sales consultants and coaches was struggling to scale their methodology beyond 20-30 clients per consultant. They were using manual processes for territory assignment, client progress tracking, and performance analytics, which limited their ability to serve more clients effectively.\n\nThe Solution: Implemented LongArena's complete SalesTouch Overseas platform with AI Coach, SalesNail, and Sales Dashboard. Enabled methodology upload and digitization, automated territory optimization, and real-time progress tracking across all clients.\n\nThe Results: Scaled their expert-led coaching program to 1,200 sales professionals across North America in just 90 days, increased revenue by 250%, improved client satisfaction scores by 30%, achieved 450% ROI.\n\nTestimonial: \"LongArena has completely transformed how we scale our sales consulting methodology across North America. What used to take us months to do for 20-30 clients, we can now do for 1,200+ consultants simultaneously - with better quality and consistency. The AI methodology digitization alone is worth the price of the platform.\"",
+          "testimonialAuthor": "Robert Thompson",
+          "testimonialTitle": "Founder & CEO, Enterprise Sales Co.",
+          "testimonialImage": "👨‍💼"
+        }
+      ],
+      "metrics": {
+        "totalClients": "2000+",
+        "totalRevenue": "$150M+",
+        "totalSavings": "$30M+",
+        "avgRoi": "420%",
+        "growthRate": "300%"
+      }
+    },
+    "interactive": {
+      "title": "Experience AI-Powered North American Sales Excellence",
+      "subtitle": "Try our engine below. No sign-up required. See the difference between generic AI and North American-optimized AI sales coaching.",
+      "coach": {
+        "title": "North American AI Sales Coach",
+        "description": "AI that has been trained on 100,000+ successful North American sales conversations from Technology, Healthcare, Finance, Manufacturing, and Retail sectors. Understands American business culture, uses American sales idioms, and is familiar with American sales terminology and negotiation styles.",
+        "scenarios": [
+          {
+            "id": "tech",
+            "icon": "💻",
+            "title": "Technology Enterprise",
+            "description": "Selling to CTOs and CIOs at US Fortune 500 companies",
+            "dealSize": "$500K - $2M",
+            "salesCycle": "90-120 days",
+            "painPoints": "Legacy systems integration, long procurement cycles, multiple decision-makers",
+            "tips": [
+              "Focus on the impact on their current processes (not your product)",
+              "Quantify the cost of inaction (fines, security risks, lost productivity)",
+              "Bring in a business case with ROI calculations",
+              "Be prepared to navigate multiple stakeholders (IT, Security, Legal, Procurement)"
+            ]
+          },
+          {
+            "id": "healthcare",
+            "icon": "🏥",
+            "title": "Healthcare Sales",
+            "description": "Selling to hospital administrators, healthcare executives, and medical directors at US hospitals and healthcare systems",
+            "dealSize": "$200K - $800K",
+            "salesCycle": "180-270 days",
+            "painPoints": "Budget constraints, regulatory compliance, multiple stakeholders, risk-averse decision making",
+            "tips": [
+              "Understand the hospital's strategic priorities (patient outcomes, cost reduction, quality metrics)",
+              "Align your solution with their value-based care approach",
+              "Be prepared to navigate complex decision-making structures (clinical, administrative, financial)",
+              "Focus on evidence-based results and patient outcomes"
+            ]
+          },
+          {
+            "id": "finance",
+            "icon": "💰",
+            "title": "Financial Services Sales",
+            "description": "Selling to CFOs, treasurers, and financial controllers at US banks, insurance companies, and investment firms",
+            "dealSize": "$500K - $5M",
+            "salesCycle": "60-90 days",
+            "painPoints": "Risk management, regulatory compliance, fiduciary responsibility, complex financial products",
+            "tips": [
+              "Speak the language of finance (risk management, ROI, NPV, IRR)",
+              "Bring quantitative data and case studies from similar institutions",
+              "Understand their regulatory environment and compliance requirements",
+              "Focus on risk mitigation, revenue growth, and operational efficiency"
+            ]
+          },
+          {
+            "id": "retail",
+            "icon": "🛒",
+            "title": "Retail Sales (B2B)",
+            "description": "Selling to purchasing managers, category managers, and business unit leaders at US retailers and distributors",
+            "dealSize": "$100K - $500K",
+            "salesCycle": "30-60 days",
+            "painPoints": "Shelf space optimization, margin pressure, seasonal trends, competition, supply chain logistics",
+            "tips": [
+              "Focus on category growth and shelf placement ROI",
+              "Bring sales data from similar retailers as proof points",
+              "Understand seasonal planning and inventory management",
+              "Offer merchandising support and category management insights"
+            ]
+          }
+        ]
+      },
+      "nail": {
+        "title": "North American Smart Page Generator",
+        "description": "AI-powered tool that automatically generates professional, high-authority sales landing pages from your raw meeting notes, transcripts, or bullet points. Creates pages specifically designed for North American C-level executives and decision-makers.",
+        "input": {
+          "placeholder": "Paste your meeting notes here...\n\nExample:\nProspected: TechCorp USA\nIndustry: Enterprise Software\nBudget: $500K/year\nDecision Maker: CTO, VP of Engineering\nPain Points: Legacy systems, integration complexity\nCurrent Process: 6-month evaluation cycle, 20% conversion rate\nKey Differentiators: AI-powered, SOC 2 compliant, American support\nNext Steps: Schedule demo, provide case study, address security concerns",
+          "features": [
+            "✨ Use American business terminology and idioms",
+            "✨ Include American social proof and case studies",
+            "✨ Format for American C-level executives (concise, data-driven)",
+            "✨ Include CTAs and next steps that resonate with American buying psychology",
+            "✨ Add metrics and ROI that American decision-makers care about"
+          ]
+        },
+        "processing": "AI analyzing your notes with North American sales methodology...",
+        "output": {
+          "title": "Professional Sales Landing Page for North American Market",
+          "url": "https://longarena-salestouch.com/enterprise-sales-2026",
+          "preview": {
+            "hero": "Stop Trading Time for Money. Transform Your Enterprise Sales Process with AI.",
+            "subhero": "Purpose-Built for North American Enterprise Sales Teams - SOC 2 Compliant, American English, US Time Zones",
+            "features": [
+              "🎯 AI-Powered Territory Optimization",
+              "📊 Real-Time Opportunity Scoring",
+              "💬 American Business Culture Understanding",
+              "⚡ 15x Deal Velocity Increase",
+              "💰 42% Win Rate Improvement"
+            ],
+            "cta": {
+              "primary": "Request a North American Demo",
+              "secondary": "Calculate Your ROI"
+            },
+            "metrics": {
+              "velocity": "15x Faster",
+              "conversion": "+42% Conversion",
+              "time": "-6 Month Sales Cycle",
+              "roi": "420% Return on Investment"
+            }
+          }
+        }
+      }
+    },
+    "cta": {
+      "primary": {
+        "title": "Ready to Dominate the North American Sales Market?",
+        "subtitle": "Join 500+ North American sales leaders who have doubled their deal velocity and increased their win rate using LongArena's AI-powered sales coaching platform.",
+        "button": {
+          "text": "Start Your 14-Day Free Trial",
+          "subtext": "No credit card required. Cancel anytime.",
+          "icon": "🎯"
+        },
+        "secondary": {
+          "title": "Prefer to Talk to a North American Sales Expert First?",
+          "subtitle": "Our team of North American sales consultants can answer your questions and show you how to achieve similar results for your organization.",
+          "button": {
+            "text": "Schedule a Demo Call",
+            "subtext": "Talk to someone who understands your market",
+            "icon": "💬"
+          }
+        }
+      }
+    },
+    "pricing": {
+      "title": "Simple Pricing for North American Sales Teams",
+      "subtitle": "Choose the plan that fits your North American sales organization's needs. All plans include 14-day free trial. No credit card required.",
+      "individual": {
+        "name": "Individual",
+        "tagline": "For Solo Sales Professionals",
+        "price": "$99",
+        "period": "/month",
+        "annual": "$1,069",
+        "annualSavings": "Save 10%",
+        "features": [
+          "Full access to North American AI Sales Coach",
+          "Unlimited AI-powered coaching sessions",
+          "Generate unlimited North American sales pages with SalesNail",
+          "Access to 500+ North American expert sales methodologies",
+          "Priority email & chat support (North American time zones)",
+          "14-day free trial included"
+        ],
+        "cta": "Start Individual Trial"
+      },
+      "team": {
+        "name": "Team",
+        "tagline": "Best for Sales Teams (5-50 members)",
+        "price": "$299",
+        "period": "/user/month",
+        "annual": "$3,228",
+        "annualSavings": "Save 20%",
+        "minUsers": "5 users minimum",
+        "features": [
+          "Everything in Individual, plus:",
+          "Team collaboration features designed for North American sales teams",
+          "Shared analytics & insights with North American regional breakdown",
+          "Team training sessions with North American sales experts (quarterly)",
+          "Dedicated customer success manager familiar with North American market",
+          "Priority support (response time < 2 hours in US/Canadian time zones)"
+        ],
+        "cta": "Start Team Trial"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "tagline": "For Organizations with 50+ Seats",
+        "price": "$299",
+        "period": "/seat/year",
+        "annual": "$5,980",
+        "minSeats": "50 seats minimum",
+        "custom": "Custom pricing available for organizations with 100+ seats",
+        "features": [
+          "Everything in Team, plus:",
+          "Single Sign-On (SSO) integration for North American enterprise auth systems (Okta, Azure AD, Google Workspace)",
+          "Dedicated North American customer success manager",
+          "Custom implementation support tailored to North American enterprise sales processes",
+          "99.9% uptime SLA guarantee with North American data centers",
+          "24/7 priority phone support (North American time zones)",
+          "Contract lock-in pricing for budget predictability",
+          "Customizable onboarding and training for your North American sales team"
+        ],
+        "cta": "Contact North American Sales"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What North American Sales Experts Say About LongArena",
+    "subtitle": "Real reviews from sales professionals, consultants, and coaches across the United States and Canada",
+    "reviews": [
+      {
+        "rating": 5,
+        "name": "John Smith",
+        "title": "VP of Sales, TechCorp USA",
+        "company": "San Francisco, CA",
+        "date": "January 2026",
+        "verified": true,
+        "image": "👨‍💼",
+        "text": "SalesTouch transformed our North American enterprise sales operation. The AI-powered territory planning alone saved us 30 hours per quarter - that's $120K per year in productivity gains. The real-time opportunity scoring has been a game-changer for our team across the United States. The ROI is absolutely insane - we saw a 42% increase in win rate within the first 6 months."
+      },
+      {
+        "rating": 5,
+        "name": "Sarah Johnson",
+        "title": "Founder & CEO, HealthCare Plus Canada",
+        "company": "Toronto, ON",
+        "date": "December 2025",
+        "verified": true,
+        "image": "👩‍💼",
+        "text": "We went from $50K/month in coaching revenue to $200K/month in revenue within 6 months using SalesTouch's AI logic. We were struggling to adapt to the US healthcare market, but LongArena's AI Coach helped us understand American healthcare buying patterns and close deals consistently with US hospital administrators. It's not just translation - it's true cultural understanding."
+      },
+      {
+        "rating": 5,
+        "name": "Michael Davis",
+        "title": "Director of Sales Operations, FinTech Innovations Inc.",
+        "company": "New York, NY",
+        "date": "November 2025",
+        "verified": true,
+        "image": "👨‍💼",
+        "text": "SalesTouch's AI-powered territory planning and proposal generation has been absolutely transformative for our North American sales operation. We've become the fastest-growing fintech sales team in the Northeast United States. The automated \"Executive Briefing\" generation alone saves us 20 hours per deal - that's $3.6M per year in productivity gains. Absolutely game-changing."
+      },
+      {
+        "rating": 4,
+        "name": "Robert Thompson",
+        "title": "Founder & CEO, Enterprise Sales Co.",
+        "company": "Chicago, IL",
+        "date": "October 2025",
+        "verified": true,
+        "image": "👨‍💼",
+        "text": "LongArena has completely transformed how we scale our sales consulting methodology across North America. What used to take us months to do for 20-30 clients, we can now do for 1,200+ consultants simultaneously - with better quality and consistency. The AI methodology digitization alone is worth the price of the platform. We've scaled from serving 30 consultants to over 1,200 in just 90 days."
+      },
+      {
+        "rating": 5,
+        "name": "Jennifer Martinez",
+        "title": "Senior Account Executive, Global Tech Partner",
+        "company": "Denver, CO",
+        "date": "September 2025",
+        "verified": true,
+        "image": "👩‍💼",
+        "text": "As a senior account executive for a global tech partner, I work with sales teams across North America. LongArena's AI Coach has become the standard for our sales enablement programs. The AI provides consistent, expert-level coaching across all regions - from East Coast to West Coast. The ROI we're seeing across our North American client base is unprecedented."
+      }
+    ],
+    "averageRating": "4.9/5",
+    "totalReviews": "1,247",
+    "verifiedCount": "892"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions by North American Sales Professionals",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "How is LongArena different from other AI sales coaching platforms?",
+        "answer": "LongArena is purpose-built for the North American market. Our AI has been trained on 100,000+ successful North American sales conversations from Technology, Healthcare, Finance, Manufacturing, and Retail sectors. We understand American business culture, use American sales idioms, and are familiar with American sales terminology. Unlike generic AI platforms, LongArena provides market-specific insights and coaching that resonates with American and Canadian buyers."
+      },
+      {
+        "id": "q2",
+        "question": "Can I use LongArena for individual sales or just for teams?",
+        "answer": "LongArena works perfectly for both! Our Individual plan is designed for solo sales professionals, consultants, and coaches who want to scale their personal expertise. Our Team and Enterprise plans are designed for sales organizations and teams of 5+ members. All plans include the same AI-powered coaching and smart page generation features."
+      },
+      {
+        "id": "q3",
+        "question": "Does LongArena integrate with my existing CRM?",
+        "answer": "Yes! LongArena integrates natively with the CRMs that North American sales teams actually use - Salesforce, HubSpot, Microsoft Dynamics, Zoho CRM, and Pipedrive. We provide bi-directional data sync, automatic opportunity scoring, and real-time updates. For Enterprise clients, we also offer custom integrations with other systems. The setup process is simple and can be completed in under 5 minutes."
+      },
+      {
+        "id": "q4",
+        "question": "Is my sales data secure with LongArena?",
+        "answer": "Absolutely. Data security is our top priority. We're SOC 2 Type II certified, CCPA compliant for California residents, and GDPR ready for cross-border sales activities. All your sales data is encrypted using AES-256 encryption and stored on enterprise-grade servers located in North American data centers. We never share your data with third parties without your explicit consent. Your sales methodology and client information is yours alone."
+      },
+      {
+        "id": "q5",
+        "question": "How does the free trial work?",
+        "answer": "Our 14-day free trial is completely risk-free and requires no credit card to start. You get full access to all features including the North American AI Sales Coach, SalesNail Smart Page Generator, Sales Dashboard, and all integrations. There's no obligation and you can cancel anytime. We're confident that once you experience the power of North American-optimized AI sales coaching, you'll want to continue with us."
+      },
+      {
+        "id": "q6",
+        "question": "What if I need help setting up or optimizing my use of LongArena?",
+        "answer": "We provide comprehensive onboarding and optimization support for all North American users. Our customer success team - all of whom are familiar with the North American sales market - is available 24/7 to help you get the most out of the platform. We offer personalized setup assistance, best practices consultations, and ongoing support to help you achieve your specific sales goals. For Team and Enterprise clients, you also get a dedicated customer success manager."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Free North American Sales Resources",
+    "subtitle": "Elevate your sales game with these free guides, templates, and tools designed specifically for US and Canadian markets",
+    "items": [
+      {
+        "id": "guide1",
+        "icon": "📘",
+        "title": "The Ultimate Guide to Selling in North America - 2026 Edition",
+        "description": "Comprehensive guide covering North American sales culture, regional buying patterns (East vs West Coast, South vs Midwest), C-level executive psychology, negotiation strategies, and closing techniques. Includes real examples from Fortune 500 and North American enterprise sales professionals.",
+        "download": "Download Free PDF (25,000 words)",
+        "readTime": "45 min read"
+      },
+      {
+        "id": "template1",
+        "icon": "📊",
+        "title": "North American Sales Email Template Pack",
+        "description": "Professionally written email templates for following up with US and Canadian prospects, scheduling meetings, sending proposals, and closing deals. Includes templates for Technology, Healthcare, Finance, Manufacturing, Retail, and other industries. All templates use American business terminology and formatting.",
+        "download": "Download Free Template Pack (50+ templates)",
+        "features": "5 different follow-up sequences, A/B tested subject lines, American business closing language"
+      },
+      {
+        "id": "template2",
+        "icon": "📋",
+        "title": "North American Sales Call Checklist",
+        "description": "Comprehensive checklist for North American sales calls covering pre-call preparation, discovery questions, objection handling, closing techniques, and post-call follow-up. Includes region-specific tips for East Coast, West Coast, South, and Midwest markets. Ensure you never miss a key question or opportunity.",
+        "download": "Download Free Checklist (150+ items)",
+        "features": "Pre-call research, Opening script, Discovery questions, Objection handling, Closing techniques, Follow-up protocol"
+      },
+      {
+        "id": "webinar1",
+        "icon": "🎥",
+        "title": "Free Webinar: 'AI-Powered Sales Coaching for North American Markets'",
+        "description": "Join North American sales experts for this free live webinar on how AI is transforming sales coaching across the United States and Canada. We'll cover real case studies from North American companies, demonstrate the AI Coach in action, and share strategies for doubling deal velocity in 2026. Register now to secure your spot!",
+        "register": "Register for Free Webinar (Next: January 30, 2026)",
+        "features": "Live demo, North American case studies, Q&A with sales experts, Recording available for registrants"
+      }
+    ]
+  },
+  "trustSignals": {
+    "security": {
+      "icon": "🔒",
+      "title": "256-bit SSL Encryption",
+      "description": "Your sales data is secure with enterprise-grade encryption",
+      "badge": "SOC 2 Type II Certified"
+    },
+    "compliance": {
+      "icon": "📋",
+      "title": "North American Data Protection",
+      "description": "Compliant with CCPA, GDPR, PIPEDA, and other North American regulations",
+      "badge": "CCPA & GDPR Compliant"
+    },
+    "support": {
+      "icon": "💬",
+      "title": "24/7 North American Support",
+      "description": "Support team available in US and Canadian time zones",
+      "badge": "US & Canadian Time Zones"
+    },
+    "certifications": {
+      "icon": "🏆",
+      "title": "Market Leader in North America",
+      "description": "#1 AI Sales Coach platform in North American market",
+      "badge": "#1 in North America"
+    },
+    "experience": {
+      "icon": "⭐",
+      "title": "Trusted by 500+ North American Teams",
+      "description": "Enterprise sales teams across the United States and Canada",
+      "badge": "500+ North American Clients"
+    },
+    "guarantee": {
+      "icon": "💰",
+      "title": "100% Money-Back Guarantee",
+      "description": "We're so confident in the North American value that we offer a 14-day risk-free trial. If you're not completely satisfied, we'll refund 100% - no questions asked.",
+      "badge": "14-Day Risk-Free Trial"
+    }
+  },
+  "meta": {
+    "title": "LongArena: AI-Powered North American Sales Coaching Platform - #1 AI Sales Coach in North America | 14-Day Free Trial",
+    "description": "The first AI architecture built specifically for North American sales experts, consultants, and coaches. Double your deal velocity with AI-powered sales coaching that understands American business culture and buying patterns. Trusted by 500+ North American enterprise sales teams.",
+    "keywords": "AI sales coach, North American sales, US sales coaching, Canadian sales, sales training, sales methodology, AI-powered sales, enterprise sales, sales automation, sales coaching platform, SalesTouch Overseas",
+    "socialMeta": {
+      "og:title": "Double Your Deal Velocity with North American AI Sales Coaching | LongArena",
+      "og:description": "The #1 AI sales coach platform in North America. Purpose-built for US and Canadian sales professionals. 14-day free trial. No credit card required.",
+      "og:image": "https://longarena-salestouch.com/images/og-image-na.jpg",
+      "og:type": "website",
+      "og:site_name": "LongArena North America",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@longarena",
+      "twitter:title": "Double Your Deal Velocity with North American AI Sales Coaching | LongArena",
+      "twitter:description": "The #1 AI sales coach platform in North America. Purpose-built for US and Canadian sales professionals. 14-day free trial. No credit card required.",
+      "twitter:image": "https://longarena-salestouch.com/images/twitter-card-na.jpg"
+    }
+}

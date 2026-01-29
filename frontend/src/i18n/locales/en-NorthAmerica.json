@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "product": "Our Methodology",
+    "features": "Expert Ecosystem",
+    "solutions": "For Coaches",
+    "pricing": "Scale Your Success",
+    "tryFree": "Start Coaching"
+  },
+  "hero": {
+    "title": "The First AI Architecture Built for Sales Experts",
+    "subtitle": "Stop trading time for money. Scale your sales expertise with an AI engine that thinks, closes, and coaches like you.",
+    "cta": "Explore SalesTouch",
+    "ctaSecondary": "Experience Demo",
+    "badge": "2026 Global Expert Edition"
+  },
+  "experience": {
+    "title": "Experience Alpha-Level Logic",
+    "subtitle": "Built for individual experts. Test our engine below.",
+    "tabCoach": "Mentor Simulator",
+    "tabNail": "Expert Engine",
+    "coachGreeting": "I'm your AI Mentor. I've analyzed thousands of successful sales conversations and patterns from top North American sales leaders. Pitch me your vision.",
+    "coachFeedback": "That's a standard approach. However, you're leading with logic, not emotion. Top-tier North American closers solve 'Pain' and build 'Urgency'. Let's try again, focusing on the cost of inaction.",
+    "inputPlaceholder": "Speak to your mentor...",
+    "nailPlaceholder": "Paste your meeting notes or raw data here...",
+    "analyzeBtn": "Generate Expert-Level Page",
+    "nailEmptyState": "Analyzing your data structure...",
+    "analysisComplete": "Logic Map Complete",
+    "nailResult": "Expert Confidence Score",
+    "signupTitle": "Capture Your Brilliance",
+    "signupDesc": "Save this logic flow to your personal dashboard and scale your coaching methodology.",
+    "emailPlaceholder": "Work Email",
+    "passwordPlaceholder": "Secure Password",
+    "createAccount": "Unlock Expert Access",
+    "freeTrialNote": "Includes 14-day premium access. Cancel anytime."
+  },
+  "features": {
+    "title": "How We Elevate North American Experts",
+    "simulation": "Logic Duplication",
+    "simulationDesc": "We digitize your unique sales methodology, allowing you to coach millions of sales professionals simultaneously while maintaining your expert-level quality.",
+    "smartPage": "Visual Authority",
+    "smartPageDesc": "Transform your rough meeting notes into high-authority visual boards that command respect from C-suite executives and drive faster deal closures.",
+    "fab": "Social Influence",
+    "fabDesc": "Automate your social influence on LinkedIn and X with precision-targeted expert messaging that builds your personal brand and attracts high-value leads."
+  },
+  "success": {
+    "title": "Master the North American Market",
+    "subtitle": "Trusted by elite sales consultants and scale-focused enterprise coaches across the United States and Canada.",
+    "stat1": "Velocity Gain",
+    "stat2": "Revenue Impact",
+    "case1": "Enterprise Tech Partner",
+    "case1Desc": "Scaled their expert-led coaching program to 1,200 sales professionals in just 30 days across North America.",
+    "case2": "Global Strategy Firm",
+    "case2Desc": "Automated their 'Executive Briefing' page generation, saving 20 hours per deal and increasing their win rate by 42%."
+  },
+  "cta": {
+    "startFreeTrial": "Start Free Trial",
+    "bookDemo": "Book Demo",
+    "viewPricing": "View Pricing",
+    "contactSales": "Contact Sales",
+    "subscribeNewsletter": "Get Sales Tips"
+  },
+  "trust": {
+    "security": "Bank-Grade Security",
+    "privacy": "Your Data is Protected",
+    "compliance": "SOC 2 & CCPA Compliant",
+    "support": "24/7 North American Support"
+  },
+  "socialProof": {
+    "teams": "500+ Enterprise Sales Teams",
+    "rating": "4.9/5 G2 Rating",
+    "market": "#1 AI Sales Coach Platform in North America",
+    "growth": "300% Year-Over-Year Growth"
+  },
+  "testimonials": {
+    "title": "What North American Experts Say",
+    "john_smith": "SalesTouch doubled our enterprise sales team's output in just 60 days. The ROI calculator alone saved us 30 hours per quarter.",
+    "sarah_johnson": "We went from $50K/month in coaching revenue to $200K/month in just 6 months using SalesTouch's AI logic.",
+    "michael_davis": "SalesTouch's AI-powered territory planning tool increased our deal velocity by 15x. Absolutely game-changing for our sales team."
+  },
+  "resources": {
+    "title": "Free Resources for North American Sales Experts",
+    "guide": "The Ultimate Guide to AI Sales Coaching in 2026",
+    "template": "Professional Sales Email Templates",
+    "checklist": "Sales Call Checklist",
+    "webinar": "Free Webinar: 'AI-Powered Sales Coaching'"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "How does the AI sales coach work?",
+    "a1": "Our AI analyzes your sales conversations in real-time, providing instant feedback based on proven methodologies like SPIN and FAB that are used by top North American sales experts.",
+    "q2": "Can I customize the AI to my specific sales methodology?",
+    "a2": "Yes, absolutely. SalesTouch allows you to upload your own sales methodology, frameworks, and best practices. Our AI then adapts to coach based on your unique approach.",
+    "q3": "What data do I need to provide?",
+    "a3": "To get the most value from SalesTouch, we recommend sharing your meeting notes, sales transcripts, CRM data, and win/loss analysis. The more data you provide, the more accurate and personalized the AI feedback will be.",
+    "q4": "How secure is my sales data?",
+    "a4": "We take data security extremely seriously. All your data is encrypted using AES-256 encryption, stored on SOC 2 Type II certified servers, and is GDPR and CCPA compliant. Your sales data is never shared with third parties without your explicit consent."
+  },
+  "footer": {
+    "copyright": "© 2026 LongArena. All rights reserved.",
+    "links": "Privacy Policy | Terms of Service | Security | GDPR Compliance | CCPA Do Not Sell | Accessibility",
+    "tagline": "Empowering North American sales experts with the precision of AI."
+  }
+}

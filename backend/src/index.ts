@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import naRoutes from './routes/naRoutes';
 
 dotenv.config();
 
@@ -9,6 +10,9 @@ const port = process.env.PORT || 3100;
 
 app.use(cors());
 app.use(express.json());
+
+// North American routes
+app.use('/api/na', naRoutes);
 
 // Basic health check
 app.get('/api/health', (req, res) => {
@@ -29,7 +33,7 @@ app.post('/api/ai/simulate', async (req, res) => {
     // In a real scenario, we'd call Azure OpenAI or Claude here
     if (provider === 'mock') {
         res.json({
-            reply: `[AI Sales Coach]: I see you're working on the ${context?.industry || 'Unknown'} sector. Based on the SPIN method, your next question should focus on the "Implication" of their current manual process.`,
+            reply: `[AI Sales Coach]: I see you're working on ${context?.industry || 'Unknown'} sector. Based on SPIN method, your next question should focus on on "Implication" of their current manual process.`,
             suggestions: [
                 "Ask about resource drain",
                 "Ask about missed opportunity costs",
