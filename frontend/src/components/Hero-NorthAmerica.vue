@@ -7,13 +7,13 @@ const showDropdown = ref(false)
 const products = [
   {
     id: 'salesTouch',
-    name: '🎯 SalesTouch',
+    name: ' SalesTouch',
     tagline: 'AI Sales Coach',
     description: 'Real-time AI coaching with SPIN & FAB method'
   },
   {
     id: 'salesNail',
-    name: '⚡ SalesNail',
+    name: ' SalesNail',
     tagline: 'Smart Page Generator',
     description: 'Generate professional sales pages in seconds'
   }
@@ -42,13 +42,13 @@ const toggleDropdown = () => {
         <!-- Trust Badges -->
         <div class="trust-badges">
           <span class="badge badge-primary">
-            🏆 #1 AI Sales Coach in North America
+             #1 AI Sales Coach in North America
           </span>
           <span class="badge badge-secondary">
-            ✅ 14-Day Free Trial - No Credit Card
+             14-Day Free Trial - No Credit Card
           </span>
           <span class="badge badge-tertiary">
-            ⭐ Trusted by 500+ Enterprise Sales Teams
+             Trusted by 500+ Enterprise Sales Teams
           </span>
         </div>
 
@@ -69,7 +69,7 @@ const toggleDropdown = () => {
         <!-- Key Metrics -->
         <div class="metrics-container">
           <div class="metric-card">
-            <div class="metric-icon">🎯</div>
+            <div class="metric-icon">DATA</div>
             <div class="metric-content">
               <div class="metric-value">Top 1%</div>
               <div class="metric-label">North America</div>
@@ -78,7 +78,7 @@ const toggleDropdown = () => {
           </div>
 
           <div class="metric-card">
-            <div class="metric-icon">💰</div>
+            <div class="metric-icon">DATA</div>
             <div class="metric-content">
               <div class="metric-value">$4.2M</div>
               <div class="metric-label">Revenue Impact</div>
@@ -87,7 +87,7 @@ const toggleDropdown = () => {
           </div>
 
           <div class="metric-card">
-            <div class="metric-icon">🚀</div>
+            <div class="metric-icon">DATA</div>
             <div class="metric-content">
               <div class="metric-value">15x</div>
               <div class="metric-label">Velocity Gain</div>
@@ -101,13 +101,13 @@ const toggleDropdown = () => {
           <a href="#salesTouch" 
              :class="{ 'cta-primary': activeProduct === 'salesTouch' }"
              class="cta-button">
-            <span class="cta-icon">🎯</span>
+            <span class="cta-icon"></span>
             <span class="cta-text">Start Free Trial</span>
             <span class="cta-subtext">14 days, no credit card</span>
           </a>
           
           <a href="#demo" class="cta-button cta-secondary">
-            <span class="cta-icon">🎮</span>
+            <span class="cta-icon"></span>
             <span class="cta-text">Try Demo</span>
             <span class="cta-subtext">Interactive experience</span>
           </a>
@@ -116,7 +116,7 @@ const toggleDropdown = () => {
         <!-- Social Proof -->
         <div class="social-proof">
           <div class="social-stat">
-            <div class="social-icon">👥</div>
+            <div class="social-icon"></div>
             <div class="social-content">
               <div class="social-value">500+</div>
               <div class="social-label">Enterprise Teams</div>
@@ -124,7 +124,7 @@ const toggleDropdown = () => {
           </div>
 
           <div class="social-stat">
-            <div class="social-icon">⭐</div>
+            <div class="social-icon"></div>
             <div class="social-content">
               <div class="social-value">4.9/5</div>
               <div class="social-label">G2 Rating</div>
@@ -132,7 +132,7 @@ const toggleDropdown = () => {
           </div>
 
           <div class="social-stat">
-            <div class="social-icon">🎯</div>
+            <div class="social-icon"></div>
             <div class="social-content">
               <div class="social-value">#1</div>
               <div class="social-label">North America</div>
@@ -163,16 +163,16 @@ const toggleDropdown = () => {
           <div class="product-badge">AI Sales Coach</div>
           <div class="product-visual">
             <div class="glass-card glass-card-large">
-              <div class="ai-avatar">🤖</div>
+              <div class="ai-avatar"></div>
               <div class="chat-bubble">
                 <div class="chat-message">
                   I see you're working on Technology sector. Based on SPIN method, 
                   your next question should focus on <span class="highlight">"Cost of Inaction"</span>.
                 </div>
                 <div class="chat-suggestions">
-                  <div class="suggestion">💡 Ask about resource drain</div>
-                  <div class="suggestion">💡 Ask about missed opportunity cost</div>
-                  <div class="suggestion">💡 Pivot to pay-off</div>
+                  <div class="suggestion"> Ask about resource drain</div>
+                  <div class="suggestion"> Ask about missed opportunity cost</div>
+                  <div class="suggestion"> Pivot to pay-off</div>
                 </div>
               </div>
             </div>
@@ -184,15 +184,15 @@ const toggleDropdown = () => {
 
           <div class="product-features">
             <div class="feature-item">
-              <span class="feature-icon">🎯</span>
+              <span class="feature-icon"></span>
               <span class="feature-text">Real-time AI feedback & coaching</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">📊</span>
+              <span class="feature-icon"></span>
               <span class="feature-text">Expert-level conversation logic (SPIN, FAB)</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">⚡</span>
+              <span class="feature-icon"></span>
               <span class="feature-text">Scale coaching to millions simultaneously</span>
             </div>
           </div>
@@ -209,7 +209,7 @@ const toggleDropdown = () => {
                   <textarea class="input-textarea" readonly></textarea>
                 </div>
                 <div class="ai-processing">
-                  <span class="processing-icon">⚡</span>
+                  <span class="processing-icon"></span>
                   <span class="processing-text">AI Generating...</span>
                 </div>
               </div>
@@ -223,7 +223,7 @@ const toggleDropdown = () => {
                 <div class="result-preview">
                   <div class="preview-mini-landing">
                     <div class="preview-hero">Stop Trading Time for Money</div>
-                    <div class="preview-cta">Get Started →</div>
+                    <div class="preview-cta">Get Started </div>
                     <div class="preview-metrics">
                       <span class="preview-stat">15x</span> faster
                       <span class="preview-stat">42%</span> conversion
@@ -236,15 +236,15 @@ const toggleDropdown = () => {
 
           <div class="product-features">
             <div class="feature-item">
-              <span class="feature-icon">⚡</span>
+              <span class="feature-icon"></span>
               <span class="feature-text">Generate professional sales pages in seconds</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">📄</span>
+              <span class="feature-icon"></span>
               <span class="feature-text">From simple notes or meeting transcripts</span>
             </div>
             <div class="feature-item">
-              <span class="feature-icon">🎨</span>
+              <span class="feature-icon"></span>
               <span class="feature-text">High-authority visual boards that command respect</span>
             </div>
           </div>
@@ -252,7 +252,7 @@ const toggleDropdown = () => {
 
         <!-- Guide Arrow -->
         <div class="guide-arrow">
-          <span class="arrow-text">See how it works ↓</span>
+          <span class="arrow-text">See how it works </span>
         </div>
       </div>
     </div>

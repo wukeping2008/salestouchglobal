@@ -59,7 +59,7 @@ const recentActivities = ref([
     title: 'New deal closed',
     description: 'Sarah closed $25K deal with Acme Corp',
     time: '2 hours ago',
-    icon: '🎉',
+    icon: 'DEAL',
     color: 'green'
   },
   {
@@ -68,7 +68,7 @@ const recentActivities = ref([
     title: 'AI Coach completed',
     description: '15 calls analyzed and feedback generated',
     time: '4 hours ago',
-    icon: '🤖',
+    icon: 'CALL',
     color: 'blue'
   },
   {
@@ -77,7 +77,7 @@ const recentActivities = ref([
     title: 'Close rate improvement',
     description: 'Team close rate up 5% this week',
     time: '6 hours ago',
-    icon: '📈',
+    icon: 'ALERT',
     color: 'green'
   },
   {
@@ -86,7 +86,7 @@ const recentActivities = ref([
     title: 'Deal stage advanced',
     description: 'Mike moved $42K deal to Proposal stage',
     time: '8 hours ago',
-    icon: '💼',
+    icon: 'DEAL',
     color: 'blue'
   },
   {
@@ -96,7 +96,7 @@ const recentActivities = ref([
     title: 'AI Coach session completed',
     description: 'Jennifer completed 20 calls coaching session',
     time: '1 day ago',
-    icon: '🎯',
+    icon: 'CALL',
     color: 'blue'
   }
 ])
@@ -144,7 +144,7 @@ const metrics = computed(() => [
     value: dashboardData.value.revenue.current,
     change: dashboardData.value.revenue.growth,
     trend: 'up',
-    icon: '💰',
+    icon: '$',
     format: 'currency'
   },
   {
@@ -153,7 +153,7 @@ const metrics = computed(() => [
     value: dashboardData.value.deals.won,
     change: 12.5,
     trend: 'up',
-    icon: '🎯',
+    icon: 'DEAL',
     format: 'number'
   },
   {
@@ -162,7 +162,7 @@ const metrics = computed(() => [
     value: dashboardData.value.calls.total,
     change: 8.3,
     trend: 'up',
-    icon: '📞',
+    icon: 'CALL',
     format: 'number'
   },
   {
@@ -171,7 +171,7 @@ const metrics = computed(() => [
     value: dashboardData.value.calls.conversion,
     change: 2.1,
     trend: 'up',
-    icon: '📊',
+    icon: '%',
     format: 'percent'
   }
 ])
@@ -297,7 +297,7 @@ onUnmounted(() => {
       <div class="dashboard-header">
         <div class="header-content">
           <h2 class="dashboard-title">
-            <span class="title-icon">📊</span>
+            <span class="title-icon"></span>
             Sales Performance Dashboard
           </h2>
           <p class="dashboard-subtitle">
@@ -310,14 +310,14 @@ onUnmounted(() => {
             :disabled="isLoading"
             class="action-button"
           >
-            🔄 Refresh
+             Refresh
           </button>
           <button
             @click="generateReport"
             :disabled="isLoading"
             class="action-button primary"
           >
-            📄 Generate Report
+             Generate Report
           </button>
         </div>
       </div>
@@ -348,7 +348,7 @@ onUnmounted(() => {
             <p class="metric-value">{{ formatMetricValue(metric.value, metric.format) }}</p>
             <div class="metric-change">
               <span :class="['change-indicator', metric.trend]">
-                {{ metric.trend === 'up' ? '↑' : '↓' }}
+                {{ metric.trend === 'up' ? '' : '' }}
               </span>
               <span class="change-value">{{ Math.abs(metric.change).toFixed(1) }}%</span>
             </div>
@@ -361,7 +361,7 @@ onUnmounted(() => {
         <!-- Chart Section -->
         <div class="chart-section">
           <h3 class="section-title">
-            <span class="title-icon">📈</span>
+            <span class="title-icon"></span>
             Performance Trend
           </h3>
           <div class="chart-container">
@@ -409,7 +409,7 @@ onUnmounted(() => {
         <!-- Recent Activities -->
         <div class="activities-section">
           <h3 class="section-title">
-            <span class="title-icon">🔔</span>
+            <span class="title-icon"></span>
             Recent Activities
           </h3>
           <div class="activities-list">
@@ -434,7 +434,7 @@ onUnmounted(() => {
       <!-- Team Performance -->
       <div class="team-section">
         <h3 class="section-title">
-          <span class="title-icon">👥</span>
+          <span class="title-icon"></span>
           Team Performance
         </h3>
         <div class="team-grid">
@@ -472,12 +472,12 @@ onUnmounted(() => {
       <!-- AI Insights -->
       <div class="insights-section">
         <h3 class="section-title">
-          <span class="title-icon">🤖</span>
+          <span class="title-icon"></span>
           AI-Powered Insights
         </h3>
         <div class="insights-grid">
           <div class="insight-card">
-            <div class="insight-icon">💡</div>
+            <div class="insight-icon">NOTE</div>
             <h4 class="insight-title">Opportunity Alert</h4>
             <p class="insight-description">
               3 deals in the "Proposal" stage have been inactive for more than 7 days.
@@ -485,7 +485,7 @@ onUnmounted(() => {
             </p>
           </div>
           <div class="insight-card">
-            <div class="insight-icon">📈</div>
+            <div class="insight-icon">NOTE</div>
             <h4 class="insight-title">Performance Improvement</h4>
             <p class="insight-description">
               Team close rate increased by 15% after implementing AI coaching recommendations.
@@ -493,7 +493,7 @@ onUnmounted(() => {
             </p>
           </div>
           <div class="insight-card">
-            <div class="insight-icon">🎯</div>
+            <div class="insight-icon">NOTE</div>
             <h4 class="insight-title">Focus Areas</h4>
             <p class="insight-description">
               Best time to call is between 9-11 AM EST.

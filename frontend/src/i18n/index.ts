@@ -7,7 +7,7 @@ import es from './locales/es.json'
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'en', // Default to English for overseas
+  locale: 'en', // Default to English
   fallbackLocale: 'en',
   messages: {
     en,

@@ -13,7 +13,7 @@ const successStories = [
     testimonial: 'SalesTouch transformed our enterprise sales operation. The AI-powered territory planning alone saved us 30 hours per quarter.',
     author: 'John Smith',
     authorTitle: 'VP of Sales',
-    authorImage: '👨'
+    authorImage: ''
   },
   {
     company: 'HealthCare Plus',
@@ -25,7 +25,7 @@ const successStories = [
     testimonial: 'We went from $50K/month in coaching to $200K/month in revenue. SalesTouch\'s AI logic is the real deal.',
     author: 'Sarah Johnson',
     authorTitle: 'Founder & CEO',
-    authorImage: '👩'
+    authorImage: ''
   },
   {
     company: 'FinTech Innovations',
@@ -37,7 +37,7 @@ const successStories = [
     testimonial: 'Automated our "Executive Briefing" generation, saving 20 hours per deal. The ROI is insane.',
     author: 'Michael Davis',
     authorTitle: 'Director of Sales Operations',
-    authorImage: '👨'
+    authorImage: ''
   }
 ]
 </script>
@@ -49,7 +49,7 @@ const successStories = [
       <!-- Section Header -->
       <div class="section-header">
         <h2 class="section-title">
-          <span class="title-icon">🏆</span>
+          <span class="title-icon"></span>
           {{ t('success.title') }}
         </h2>
         <p class="section-subtitle">{{ t('success.subtitle') }}</p>
@@ -58,7 +58,7 @@ const successStories = [
       <!-- Key Metrics -->
       <div class="metrics-banner">
         <div class="metric-banner-item">
-          <div class="metric-icon">📈</div>
+          <div class="metric-icon">DATA</div>
           <div class="metric-content">
             <div class="metric-value">{{ t('success.stat1') }}</div>
             <div class="metric-label">{{ t('success.metric1') }}</div>
@@ -67,7 +67,7 @@ const successStories = [
         </div>
 
         <div class="metric-banner-item">
-          <div class="metric-icon">💰</div>
+          <div class="metric-icon">DATA</div>
           <div class="metric-content">
             <div class="metric-value">{{ t('success.stat2') }}</div>
             <div class="metric-label">{{ t('success.metric2') }}</div>
@@ -86,7 +86,7 @@ const successStories = [
               <div class="company-badge">{{ t('success.case1') }}</div>
               <h3 class="company-name">TechCorp</h3>
               <div class="industry-tag">
-                <span class="industry-icon">🏢</span>
+                <span class="industry-icon"></span>
                 {{ successStories[0].industry }}
               </div>
             </div>
@@ -94,7 +94,7 @@ const successStories = [
 
           <div class="story-results">
             <div class="result-item">
-              <span class="result-icon">📈</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">Deal Size</div>
                 <div class="result-value">{{ successStories[0].dealSize }}</div>
@@ -102,7 +102,7 @@ const successStories = [
             </div>
 
             <div class="result-item">
-              <span class="result-icon">⏱</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">Time Saved</div>
                 <div class="result-value">{{ successStories[0].timeSaved }}</div>
@@ -110,7 +110,7 @@ const successStories = [
             </div>
 
             <div class="result-item">
-              <span class="result-icon">🚀</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">ROI</div>
                 <div class="result-value roi">{{ successStories[0].roi }}</div>
@@ -120,7 +120,7 @@ const successStories = [
 
           <div class="story-testimonial">
             <div class="testimonial-content">
-              <div class="testimonial-icon">💬</div>
+              <div class="testimonial-icon">QUOTE</div>
               <p class="testimonial-text">"{{ successStories[0].testimonial }}"</p>
             </div>
 
@@ -141,7 +141,7 @@ const successStories = [
               <div class="company-badge">{{ t('success.case2') }}</div>
               <h3 class="company-name">HealthCare Plus</h3>
               <div class="industry-tag">
-                <span class="industry-icon">🏥</span>
+                <span class="industry-icon"></span>
                 {{ successStories[1].industry }}
               </div>
             </div>
@@ -149,7 +149,7 @@ const successStories = [
 
           <div class="story-results">
             <div class="result-item">
-              <span class="result-icon">💰</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">Deal Size</div>
                 <div class="result-value">{{ successStories[1].dealSize }}</div>
@@ -157,7 +157,7 @@ const successStories = [
             </div>
 
             <div class="result-item">
-              <span class="result-icon">⏱</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">Time Saved</div>
                 <div class="result-value">{{ successStories[1].timeSaved }}</div>
@@ -165,7 +165,7 @@ const successStories = [
             </div>
 
             <div class="result-item">
-              <span class="result-icon">🚀</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">ROI</div>
                 <div class="result-value roi">{{ successStories[1].roi }}</div>
@@ -175,7 +175,7 @@ const successStories = [
 
           <div class="story-testimonial">
             <div class="testimonial-content">
-              <div class="testimonial-icon">💬</div>
+              <div class="testimonial-icon">QUOTE</div>
               <p class="testimonial-text">"{{ successStories[1].testimonial }}"</p>
             </div>
 
@@ -196,7 +196,7 @@ const successStories = [
               <div class="company-badge">{{ t('success.case1') }}</div>
               <h3 class="company-name">FinTech Innovations</h3>
               <div class="industry-tag">
-                <span class="industry-icon">🏦</span>
+                <span class="industry-icon"></span>
                 {{ successStories[2].industry }}
               </div>
             </div>
@@ -204,7 +204,7 @@ const successStories = [
 
           <div class="story-results">
             <div class="result-item">
-              <span class="result-icon">💰</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">Deal Size</div>
                 <div class="result-value">{{ successStories[2].dealSize }}</div>
@@ -212,7 +212,7 @@ const successStories = [
             </div>
 
             <div class="result-item">
-              <span class="result-icon">⏱</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">Time Saved</div>
                 <div class="result-value">{{ successStories[2].timeSaved }}</div>
@@ -220,7 +220,7 @@ const successStories = [
             </div>
 
             <div class="result-item">
-              <span class="result-icon">🚀</span>
+              <span class="result-icon"></span>
               <div class="result-content">
                 <div class="result-label">ROI</div>
                 <div class="result-value roi">{{ successStories[2].roi }}</div>
@@ -230,7 +230,7 @@ const successStories = [
 
           <div class="story-testimonial">
             <div class="testimonial-content">
-              <div class="testimonial-icon">💬</div>
+              <div class="testimonial-icon">QUOTE</div>
               <p class="testimonial-text">"{{ successStories[2].testimonial }}"</p>
             </div>
 
@@ -253,13 +253,13 @@ const successStories = [
         
         <div class="cta-group">
           <a href="#start-free-trial" class="cta-button primary">
-            <span class="cta-icon">🚀</span>
+            <span class="cta-icon"></span>
             <span class="cta-text">Start 14-Day Free Trial</span>
             <span class="cta-subtext">No credit card required</span>
           </a>
           
           <a href="#view-more-cases" class="cta-button secondary">
-            <span class="cta-icon">📋</span>
+            <span class="cta-icon"></span>
             <span class="cta-text">View More Cases</span>
             <span class="cta-subtext">25+ success stories</span>
           </a>
@@ -269,19 +269,19 @@ const successStories = [
       <!-- Trust Signals -->
       <div class="trust-signals">
         <div class="trust-item">
-          <span class="trust-icon">🔒</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">SOC 2 Type II Certified</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">💳</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">PCI DSS Compliant</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">🛡️</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">GDPR & CCPA Compliant</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">🏆</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">#1 in North America</span>
         </div>
       </div>

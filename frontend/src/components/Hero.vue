@@ -1,6 +1,27 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+const props = defineProps<{
+  title?: string
+  subtitle?: string
+  cta?: string
+  ctaSecondary?: string
+  ctaHref?: string
+  ctaSecondaryHref?: string
+}>()
+
 const { t } = useI18n()
+
+// Prefer region-driven copy when available, otherwise fall back to locale strings
+const displayTitle = computed(() => props.title || t('hero.title'))
+const displaySubtitle = computed(() => props.subtitle || t('hero.subtitle'))
+const primaryCta = computed(() => props.cta || t('hero.cta'))
+const secondaryCta = computed(() => props.ctaSecondary || t('hero.ctaSecondary'))
+const primaryHref = computed(() => props.ctaHref || 'https://touch.long-arena.com/')
+const secondaryHref = computed(() => props.ctaSecondaryHref || 'https://touch.long-arena.com/')
+const heroImage = '/assets/ai-coach.png'
+const heroImageAlt = computed(() => t('hero.imageAlt'))
 </script>
 
 <template>
@@ -9,19 +30,20 @@ const { t } = useI18n()
     <div class="premium-container hero-content">
       <div class="hero-text">
         <div class="badge glass">{{ t('hero.badge') }}</div>
-        <h1 class="hero-title">{{ t('hero.title') }}</h1>
-        <p class="hero-subtitle">{{ t('hero.subtitle') }}</p>
+        <h1 class="hero-title">{{ displayTitle }}</h1>
+        <p class="hero-subtitle">{{ displaySubtitle }}</p>
         <div class="cta-group">
-          <a href="#" class="cta-button primary">{{ t('hero.cta') }}</a>
-          <a href="#" class="cta-button secondary">{{ t('hero.ctaSecondary') }}</a>
+          <a :href="primaryHref" class="cta-button primary">{{ primaryCta }}</a>
+          <a :href="secondaryHref" class="cta-button secondary">{{ secondaryCta }}</a>
         </div>
       </div>
       <div class="hero-image-wrapper">
         <div class="image-glass-card">
           <img 
-            src="/assets/ai-coach.png" 
-            alt="AI Sales Coach"  
+            :src="heroImage" 
+            :alt="heroImageAlt"  
             class="hero-img"
+            loading="eager"
           />
           <div class="overlay-stat glass">
             <span class="stat-value">Top 1%</span>

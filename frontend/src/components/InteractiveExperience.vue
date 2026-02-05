@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -13,6 +13,7 @@ const nailInput = ref('')
 const nailResult = ref(false)
 const isTyping = ref(false)
 const showSignup = ref(false)
+const mainSiteUrl = 'https://touch.long-arena.com/'
 
 // Scripted Choices for better "Journey"
 const suggestChoices = ref([
@@ -74,14 +75,14 @@ const handleAnalyze = () => {
         <!-- Mock Phone Frame in Mobile Mode -->
         <div v-if="isMobileMode" class="phone-frame">
           <div class="phone-header">
-            <span class="status">LongArena • Coaching Live</span>
+            <span class="status">LongArena  Coaching Live</span>
             <div class="camera"></div>
           </div>
           <div class="phone-screen glass-panel">
             <!-- Mobile Chat View (Info Flow Style) -->
             <div class="mobile-chat" v-if="activeTab === 'coach'">
               <div v-for="(msg, index) in chatLog" :key="index" :class="['mobile-msg', msg.role]">
-                <div class="avatar-sm">{{ msg.role === 'ai' ? '🧠' : '👤' }}</div>
+                <div class="avatar-sm">{{ msg.role === 'ai' ? '' : '' }}</div>
                 <div class="bubble-sm">{{ msg.content.startsWith('experience.') ? t(msg.content) : msg.content }}</div>
               </div>
               <div v-if="suggestChoices.length > 0" class="mobile-choices">
@@ -100,17 +101,17 @@ const handleAnalyze = () => {
         <div v-else class="demo-card glass-panel">
           <div class="demo-tabs">
             <button :class="['tab-btn', { active: activeTab === 'coach' }]" @click="activeTab = 'coach'">
-              🤖 {{ t('experience.tabCoach') }}
+               {{ t('experience.tabCoach') }}
             </button>
             <button :class="['tab-btn', { active: activeTab === 'nail' }]" @click="activeTab = 'nail'">
-              ⚡ {{ t('experience.tabNail') }}
+               {{ t('experience.tabNail') }}
             </button>
           </div>
 
           <div v-if="activeTab === 'coach'" class="interface-body">
             <div class="chat-window">
               <div v-for="(msg, index) in chatLog" :key="index" :class="['msg', msg.role]">
-                <div class="msg-avatar">{{ msg.role === 'ai' ? '🧠' : '👤' }}</div>
+                <div class="msg-avatar">{{ msg.role === 'ai' ? '' : '' }}</div>
                 <div class="msg-bubble">{{ msg.content.startsWith('experience.') ? t(msg.content) : msg.content }}</div>
               </div>
               
@@ -127,7 +128,7 @@ const handleAnalyze = () => {
             </div>
             <div class="input-area" :class="{ disabled: showSignup }">
               <input v-model="userInput" @keyup.enter="handleSend()" :placeholder="t('experience.inputPlaceholder')" type="text" />
-              <button @click="handleSend()" class="send-btn">➤</button>
+              <button @click="handleSend()" class="send-btn"></button>
             </div>
           </div>
 
@@ -164,10 +165,10 @@ const handleAnalyze = () => {
             <div class="signup-card">
               <h3>{{ t('experience.signupTitle') }}</h3>
               <p>{{ t('experience.signupDesc') }}</p>
-              <form class="signup-form" @submit.prevent>
+              <div class="signup-form">
                 <input type="email" :placeholder="t('experience.emailPlaceholder')" required />
-                <button type="submit" class="cta-button full-width">{{ t('experience.createAccount') }}</button>
-              </form>
+                <a :href="mainSiteUrl" class="cta-button full-width">{{ t('experience.createAccount') }}</a>
+              </div>
               <p class="tiny-note">{{ t('experience.freeTrialNote') }}</p>
             </div>
           </div>

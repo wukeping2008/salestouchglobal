@@ -27,20 +27,24 @@
         "freeTrialNote": "包含 14 天高级功能体验。"
     },
     "hero": {
-        "title": "专为销售专家打造的首个 AI 架构",
-        "subtitle": "停止用时间换金钱。利用像你一样思考、成交和辅导的 AI 引擎，实现专业能力的规模化复制。",
-        "cta": "探索 LongArena",
-        "ctaSecondary": "立即体验 Demo",
-        "badge": "2026 全球专家版发布"
+        "title": "SalesTouch：让新人和销冠一样思考和行动",
+        "subtitle": "不是静态CRM，而是你的智能军师与全能秘书。面向1-100人高客单价团队，训-谋-战-管全链路。",
+        "cta": "进入 SalesTouch",
+        "ctaSecondary": "观看演示",
+        "badge": "AI销售助手",
+        "imageAlt": "职场女性在工作中"
     },
     "features": {
-        "title": "我们如何成就专家",
-        "simulation": "逻辑复制",
-        "simulationDesc": "数字化你的独特销售方法论，让你有能力同时辅导数以百万计的学员。",
-        "smartPage": "视觉权威",
-        "smartPageDesc": "将零散笔记转化为高权威的视觉提案，赢得决策层的尊重。",
-        "fab": "社交圈层影响力",
-        "fabDesc": "精准自动化的社交媒体叙事，在 LinkedIn 和 X 上放大你的专家声量。"
+        "title": "四位一体增长引擎",
+        "subtitle": "训-谋-战-管全链路",
+        "training": "训：7x24金牌陪练",
+        "trainingDesc": "沉浸式实战、语音打断、五维雷达复盘，复制销冠能力。",
+        "planning": "谋：懂业务的战略军师",
+        "planningDesc": "SPIN 规划 + FAB 映射，自动生成拜访问题与策略。",
+        "execution": "战：零摩擦语音指挥",
+        "executionDesc": "语音指令日程、智能锦囊、文档自动化，告别低价值杂务。",
+        "management": "管：透明合规的透视镜",
+        "managementDesc": "LBS+语音校验与过程资产化，洞察动作与能力短板。"
     },
     "success": {
         "title": "掌控全球市场",
@@ -51,5 +55,104 @@
         "case1Desc": "在 30 天内将其专家主导的教练项目规模化至 1,200 名参与者。",
         "case2": "Global Strategy Firm",
         "case2Desc": "自动化其'执行简报'生成，每笔订单节省 20 小时精力和时间。"
+    },
+    "modules": {
+        "title": "AI销售助手",
+        "subtitle": "让日常销售决策更快、材料产出更轻松。",
+        "items": {
+            "workbench": {
+                "title": "销售工作台",
+                "desc": "日常工作一览，快速记录与分享。"
+            },
+            "productEntry": {
+                "title": "产品信息录入",
+                "desc": "管理产品资料，上传产品文档和相关资料。"
+            },
+            "productBrowse": {
+                "title": "产品信息浏览",
+                "desc": "浏览产品资料，查看产品信息。"
+            },
+            "customerPipeline": {
+                "title": "客户和商机",
+                "desc": "可视化管理客户关系和销售商机。"
+            },
+            "spinPlan": {
+                "title": "SPIN 拜访计划",
+                "desc": "基于产品特性生成专业的销售拜访计划。"
+            },
+            "pptStudio": {
+                "title": "PPT工作台",
+                "desc": "AI驱动的专业PPT生成，支持多套模板。"
+            },
+            "voiceBot": {
+                "title": "AI对练语音机器人",
+                "desc": "自定义语音机器人，实现自动化语音交互。"
+            },
+            "voiceTraining": {
+                "title": "我的语音训练",
+                "desc": "查看并复盘参与过的语音训练。"
+            },
+            "assistantChat": {
+                "title": "AI 助手对话",
+                "desc": "与 AI 助手自由对话，获取即时销售支持。"
+            },
+            "managerView": {
+                "title": "管理者视图",
+                "desc": "查看团队销售数据，分析销售表现。"
+            },
+            "b2bFlow": {
+                "title": "B2B销售流程配置",
+                "desc": "配置B2B销售的最佳实践业务流程。"
+            }
+        }
+    },
+    "roles": {
+        "title": "多角色协同体系",
+        "subtitle": "ReAct 架构让不同角色与 AI 深度耦合。",
+        "items": {
+            "salesRep": {
+                "title": "销售代表：只做决策，不填表格",
+                "desc": "语音指令完成日程、录入与策略复盘。"
+            },
+            "salesManager": {
+                "title": "销售经理：基于数据的辅导者",
+                "desc": "雷达图评估与拜访可视化，精准补强。"
+            },
+            "marketing": {
+                "title": "市场/产品：弹药库管理员",
+                "desc": "维护 FAB 与 Prompt 模板，注入一线。"
+            },
+            "owner": {
+                "title": "企业主：全域掌控者",
+                "desc": "真实一线数据驱动决策与营收预判。"
+            },
+            "externalConsultant": {
+                "title": "外部顾问：流程架构师",
+                "desc": "配置 Agent 调用逻辑，固化最佳实践。"
+            }
+        }
+    },
+    "scenarios": {
+        "title": "关键时刻的胜负手",
+        "subtitle": "面向不同场景的智能体设计，锁定高价值时刻。",
+        "items": {
+            "tob": {
+                "title": "ToB 复杂销售 - 赢在顶层谈判室",
+                "desc": "战前推演、SPIN 武器库、PPT 智能工场。"
+            },
+            "toc": {
+                "title": "ToC 高客单价 - 赢在沉浸式面诊桌",
+                "desc": "语音陪练、智能锦囊、微信跟进助手。"
+            },
+            "product": {
+                "title": "产品管理者 - 赢在上市起跑线",
+                "desc": "技术文档自动转 FAB 卡片，快速赋能一线。"
+            }
+        }
+    },
+    "footer": {
+        "tagline": "全球专家版 - 企业销售加速平台",
+        "compliance": "合规",
+        "copy": "© 2026 SalesTouch. 保留所有权利。面向全球企业打造。"
     }
 }

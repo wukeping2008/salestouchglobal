@@ -5,42 +5,42 @@ const { t } = useI18n()
 const features = [
   {
     id: 'roi',
-    icon: '💰',
+    icon: 'ROI',
     title: 'title',
     description: 'description',
     stat: '42% avg increase'
   },
   {
     id: 'dashboard',
-    icon: '📊',
+    icon: 'DASH',
     title: 'title',
     description: 'description',
     stat: '15x velocity gain'
   },
   {
     id: 'ai-coach',
-    icon: '🎯',
+    icon: 'AI',
     title: 'title',
     description: 'description',
     stat: 'Top 1% logic accuracy'
   },
   {
     id: 'cr-integration',
-    icon: '💻',
+    icon: 'CRM',
     title: 'title',
     description: 'description',
     stat: 'Salesforce, HubSpot ready'
   },
   {
     id: 'time-saving',
-    icon: '⏰',
+    icon: 'TIME',
     title: 'title',
     description: 'description',
     stat: '20 hrs/quarter saved'
   },
   {
     id: 'north-american-compliance',
-    icon: '🇺🇸',
+    icon: 'COMP',
     title: 'title',
     description: 'description',
     stat: 'SOC 2 & CCPA certified'
@@ -131,11 +131,9 @@ const features = [
       <!-- CTA Section -->
       <div class="features-cta">
         <a href="#roi" class="cta-button primary">
-          <span class="cta-icon">💰</span>
           <span class="cta-text">Calculate Your ROI</span>
         </a>
         <a href="#dashboard" class="cta-button secondary">
-          <span class="cta-icon">📊</span>
           <span class="cta-text">View Dashboard Demo</span>
         </a>
       </div>

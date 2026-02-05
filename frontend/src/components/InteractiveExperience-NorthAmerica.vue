@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 const activeTab = ref('coach')
 const tabs = [
-  { id: 'coach', name: 'Mentor Simulator', icon: '🎯' },
-  { id: 'nail', name: 'Expert Engine', icon: '⚡' }
+  { id: 'coach', name: 'Mentor Simulator', icon: 'M' },
+  { id: 'nail', name: 'Expert Engine', icon: 'E' }
 ]
 
 const selectTab = (tabId: string) => {
@@ -40,7 +40,7 @@ const selectTab = (tabId: string) => {
         <div class="coach-container">
           <!-- AI Avatar -->
           <div class="ai-avatar-wrapper">
-            <div class="ai-avatar">🤖</div>
+            <div class="ai-avatar"></div>
             <div class="avatar-badge">AI Sales Coach</div>
           </div>
 
@@ -49,7 +49,7 @@ const selectTab = (tabId: string) => {
             <div class="chat-message coach-message">
               <div class="message-content">
                 <div class="greeting">
-                  👋 Hello! I'm your AI-powered Sales Coach.
+                   Hello! I'm your AI-powered Sales Coach.
                 </div>
                 <div class="introduction">
                   I've analyzed thousands of successful sales conversations and patterns from top North American sales leaders.
@@ -58,9 +58,9 @@ const selectTab = (tabId: string) => {
                   <strong>Let me help you master the art of closing.</strong>
                 </div>
                 <div class="incentives">
-                  <span class="incentive">✨ Share your current sales scenario</span>
-                  <span class="incentive">💡 Get expert-level SPIN/FAB feedback</span>
-                  <span class="incentive">🚀 Practice in a safe, risk-free environment</span>
+                  <span class="incentive"> Share your current sales scenario</span>
+                  <span class="incentive"> Get expert-level SPIN/FAB feedback</span>
+                  <span class="incentive"> Practice in a safe, risk-free environment</span>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ const selectTab = (tabId: string) => {
             <h3 class="suggestions-title">Quick Start Scenarios</h3>
             
             <div class="suggestion-card" @click="selectScenario('tech')">
-              <div class="scenario-icon">💻</div>
+              <div class="scenario-icon">SCENE</div>
               <div class="scenario-content">
                 <div class="scenario-title">Technology Enterprise</div>
                 <div class="scenario-desc">Selling to CTOs and CIOs</div>
@@ -83,7 +83,7 @@ const selectTab = (tabId: string) => {
             </div>
 
             <div class="suggestion-card" @click="selectScenario('healthcare')">
-              <div class="scenario-icon">🏥</div>
+              <div class="scenario-icon">SCENE</div>
               <div class="scenario-content">
                 <div class="scenario-title">Healthcare Sales</div>
                 <div class="scenario-desc">Selling to hospital administrators</div>
@@ -95,7 +95,7 @@ const selectTab = (tabId: string) => {
             </div>
 
             <div class="suggestion-card" @click="selectScenario('finance')">
-              <div class="scenario-icon">💰</div>
+              <div class="scenario-icon">SCENE</div>
               <div class="scenario-content">
                 <div class="scenario-title">Financial Services</div>
                 <div class="scenario-desc">Selling to CFOs and treasurers</div>
@@ -115,7 +115,7 @@ const selectTab = (tabId: string) => {
           <!-- Input Simulation -->
           <div class="input-simulation">
             <div class="input-header">
-              <div class="input-icon">📝</div>
+              <div class="input-icon"></div>
               <div class="input-title">Paste Your Notes</div>
               <div class="input-subtitle">Raw meeting notes, transcripts, or bullet points</div>
             </div>
@@ -135,7 +135,7 @@ Example:
             ></textarea>
 
             <div class="ai-status">
-              <div class="status-icon">⚡</div>
+              <div class="status-icon"></div>
               <div class="status-text">
                 <div class="status-main">AI Analysis Ready</div>
                 <div class="status-sub">Click "Generate" to create your expert landing page</div>
@@ -146,11 +146,11 @@ Example:
           <!-- Action Buttons -->
           <div class="action-buttons">
             <button class="action-btn primary">
-              <span class="btn-icon">🚀</span>
+              <span class="btn-icon"></span>
               <span class="btn-text">Generate Landing Page</span>
             </button>
             <button class="action-btn secondary">
-              <span class="btn-icon">📋</span>
+              <span class="btn-icon"></span>
               <span class="btn-text">Save Notes</span>
             </button>
           </div>
@@ -158,7 +158,7 @@ Example:
           <!-- Preview Section -->
           <div class="preview-section">
             <div class="preview-header">
-              <div class="preview-icon">👁</div>
+              <div class="preview-icon"></div>
               <div class="preview-title">Preview Your Result</div>
               <div class="preview-subtitle">See how your notes transform into a pro landing page</div>
             </div>
@@ -173,33 +173,33 @@ Example:
 
                 <div class="preview-features">
                   <div class="preview-feature">
-                    <span class="feature-icon">⚡</span>
+                    <span class="feature-icon"></span>
                     <span class="feature-text">AI-Powered Optimization</span>
                   </div>
                   <div class="preview-feature">
-                    <span class="feature-icon">📊</span>
+                    <span class="feature-icon"></span>
                     <span class="feature-text">Data-Driven Insights</span>
                   </div>
                   <div class="preview-feature">
-                    <span class="feature-icon">🎨</span>
+                    <span class="feature-icon"></span>
                     <span class="feature-text">Professional Visual Design</span>
                   </div>
                 </div>
 
                 <div class="preview-metrics">
                   <div class="preview-metric">
-                    <span class="metric-icon">📈</span>
+                    <span class="metric-icon"></span>
                     <span class="metric-text">+15x Faster</span>
                   </div>
                   <div class="preview-metric">
-                    <span class="metric-icon">💰</span>
+                    <span class="metric-icon"></span>
                     <span class="metric-text">+42% Conversion</span>
                   </div>
                 </div>
 
                 <div class="preview-cta">
                   <button class="preview-cta-btn">
-                    <span class="cta-icon">👉</span>
+                    <span class="cta-icon"></span>
                     <span class="cta-text">Get Started</span>
                   </button>
                 </div>
@@ -222,12 +222,12 @@ Example:
         
         <div class="cta-group">
           <a href="#start-free-trial" class="cta-button primary">
-            <span class="cta-icon">🎯</span>
+            <span class="cta-icon"></span>
             <span class="cta-text">Start 14-Day Free Trial</span>
             <span class="cta-subtext">No credit card required</span>
           </a>
           <a href="#contact-demo" class="cta-button secondary">
-            <span class="cta-icon">💬</span>
+            <span class="cta-icon"></span>
             <span class="cta-text">Book Demo</span>
             <span class="cta-subtext">Talk to a sales expert</span>
           </a>
@@ -236,15 +236,15 @@ Example:
         <!-- Social Proof -->
         <div class="social-proof-experience">
           <div class="proof-item">
-            <span class="proof-icon">👥</span>
+            <span class="proof-icon"></span>
             <span class="proof-text">Used by 500+ Enterprise Sales Teams</span>
           </div>
           <div class="proof-item">
-            <span class="proof-icon">⭐</span>
+            <span class="proof-icon"></span>
             <span class="proof-text">4.9/5 Average Rating</span>
           </div>
           <div class="proof-item">
-            <span class="proof-icon">🏆</span>
+            <span class="proof-icon"></span>
             <span class="proof-text">#1 AI Sales Coach in North America</span>
           </div>
         </div>

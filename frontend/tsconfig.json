@@ -1,7 +1,40 @@
 {
   "files": [],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "esModuleInterop": true,
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "env.d.ts"],
+  "exclude": [
+    "src/components/*-NorthAmerica.vue",
+    "src/components/HelloWorld.vue",
+    "src/components/NorthAmericanCTA.vue",
+    "src/components/SalesDashboard.vue",
+    "src/components/ROICalculator.vue",
+    "src/components/RegionSelector.vue",
+    "src/composables/useRegionSelector.ts",
+    "src/data/regions.ts"
+  ],
   "references": [
-    { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ]
 }

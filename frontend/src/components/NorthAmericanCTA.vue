@@ -14,7 +14,7 @@ const toggleTrialInfo = () => {
       <!-- CTA Title -->
       <div class="cta-header">
         <h2 class="cta-title">
-          <span class="title-icon">🎯</span>
+          <span class="title-icon"></span>
           Ready to Scale Your Sales Success?
         </h2>
         <p class="cta-subtitle">
@@ -29,7 +29,7 @@ const toggleTrialInfo = () => {
         <!-- Individual Plan -->
         <div class="pricing-card individual">
           <div class="card-header">
-            <div class="card-icon">👤</div>
+            <div class="card-icon">CARD</div>
             <h3 class="plan-name">Individual</h3>
             <div class="plan-badge">Most Popular</div>
           </div>
@@ -49,30 +49,30 @@ const toggleTrialInfo = () => {
 
           <ul class="features-list">
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Full access to SalesTouch AI Coach
             </li>
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Unlimited AI-powered coaching sessions
             </li>
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Generate unlimited sales pages with SalesNail
             </li>
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Access to 500+ expert sales methodologies
             </li>
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Priority email & chat support
             </li>
           </ul>
 
           <div class="cta-group">
             <a href="#start-individual" class="cta-button primary">
-              <span class="btn-icon">🚀</span>
+              <span class="btn-icon"></span>
               <span class="btn-text">Start 14-Day Free Trial</span>
               <span class="btn-subtext">No credit card required</span>
             </a>
@@ -82,7 +82,7 @@ const toggleTrialInfo = () => {
         <!-- Team Plan -->
         <div class="pricing-card team">
           <div class="card-header">
-            <div class="card-icon">👥</div>
+            <div class="card-icon">CARD</div>
             <h3 class="plan-name">Team</h3>
             <div class="plan-badge">Best for Teams</div>
           </div>
@@ -102,28 +102,28 @@ const toggleTrialInfo = () => {
 
           <ul class="features-list">
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Everything in Individual, plus:
             </li>
             <li class="feature-item">
-              <span class="feature-icon">🎯</span>
+              <span class="feature-icon"></span>
               Team collaboration features
             </li>
             <li class="feature-item">
-              <span class="feature-icon">📊</span>
+              <span class="feature-icon"></span>
               Shared analytics & insights
             </li>
             <li class="feature-item">
-              <span class="feature-icon">👨‍💼</span>
+              <span class="feature-icon"></span>
               Dedicated customer success manager
             </li>
             <li class="feature-item">
-              <span class="feature-icon">💼</span>
-              Team training sessions (monthly）
+              <span class="feature-icon"></span>
+              Team training sessions (monthly)
             </li>
             <li class="feature-item">
-              <span class="feature-icon">🚀</span>
-              Priority support (response < 2 hours）
+              <span class="feature-icon"></span>
+              Priority support (response < 2 hours)
             </li>
           </ul>
 
@@ -133,7 +133,7 @@ const toggleTrialInfo = () => {
 
           <div class="cta-group">
             <a href="#start-team" class="cta-button primary">
-              <span class="btn-icon">👥</span>
+              <span class="btn-icon"></span>
               <span class="btn-text">Start Team Trial</span>
               <span class="btn-subtext">14 days, no credit card</span>
             </a>
@@ -143,7 +143,7 @@ const toggleTrialInfo = () => {
         <!-- Enterprise Plan -->
         <div class="pricing-card enterprise">
           <div class="card-header">
-            <div class="card-icon">🏢</div>
+            <div class="card-icon">CARD</div>
             <h3 class="plan-name">Enterprise</h3>
             <div class="plan-badge">For 50+ Seats</div>
           </div>
@@ -162,31 +162,31 @@ const toggleTrialInfo = () => {
 
           <ul class="features-list">
             <li class="feature-item">
-              <span class="feature-icon">✅</span>
+              <span class="feature-icon"></span>
               Everything in Team, plus:
             </li>
             <li class="feature-item">
-              <span class="feature-icon">🔐</span>
+              <span class="feature-icon"></span>
               SSO (Single Sign-On) integration
             </li>
             <li class="feature-item">
-              <span class="feature-icon">💳</span>
+              <span class="feature-icon"></span>
               Dedicated success manager
             </li>
             <li class="feature-item">
-              <span class="feature-icon">🎯</span>
+              <span class="feature-icon"></span>
               Custom implementation support
             </li>
             <li class="feature-item">
-              <span class="feature-icon">🛡️</span>
+              <span class="feature-icon"></span>
               99.9% uptime SLA guarantee
             </li>
             <li class="feature-item">
-              <span class="feature-icon">📞</span>
+              <span class="feature-icon"></span>
               24/7 priority phone support
             </li>
             <li class="feature-item">
-              <span class="feature-icon">📋</span>
+              <span class="feature-icon"></span>
               Contract lock-in pricing
             </li>
           </ul>
@@ -197,7 +197,7 @@ const toggleTrialInfo = () => {
 
           <div class="cta-group">
             <a href="#start-enterprise" class="cta-button primary">
-              <span class="btn-icon">🏢</span>
+              <span class="btn-icon"></span>
               <span class="btn-text">Contact Sales</span>
               <span class="btn-subtext">Custom quote</span>
             </a>
@@ -210,27 +210,27 @@ const toggleTrialInfo = () => {
       <div class="trial-info-banner" v-if="showTrialInfo">
         <div class="trial-content">
           <h3 class="trial-title">
-            <span class="trial-icon">✨</span>
+            <span class="trial-icon"></span>
             14-Day Free Trial Explained
           </h3>
           
           <div class="trial-details">
             <div class="trial-detail">
-              <span class="detail-icon">📅</span>
+              <span class="detail-icon"></span>
               <div class="detail-text">
                 <strong>Full Access</strong> during 14 days
               </div>
             </div>
             
             <div class="trial-detail">
-              <span class="detail-icon">💳</span>
+              <span class="detail-icon"></span>
               <div class="detail-text">
                 <strong>No Credit Card Required</strong> to start
               </div>
             </div>
             
             <div class="trial-detail">
-              <span class="detail-icon">🚀</span>
+              <span class="detail-icon"></span>
               <div class="detail-text">
                 <strong>Cancel Anytime</strong> if not satisfied
               </div>
@@ -239,7 +239,7 @@ const toggleTrialInfo = () => {
 
           <div class="trial-cta">
             <button @click="toggleTrialInfo" class="close-button">
-              Close ×
+              Close
             </button>
           </div>
         </div>
@@ -248,7 +248,7 @@ const toggleTrialInfo = () => {
       <!-- Trust Signals -->
       <div class="trust-section">
         <div class="trust-item">
-          <span class="trust-icon">🔒</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">
             <strong>256-bit SSL Encryption</strong>
             <span class="trust-subtext">Your data is secure</span>
@@ -256,7 +256,7 @@ const toggleTrialInfo = () => {
         </div>
 
         <div class="trust-item">
-          <span class="trust-icon">🏆</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">
             <strong>#1 in North America</strong>
             <span class="trust-subtext">AI Sales Coach Platform</span>
@@ -264,7 +264,7 @@ const toggleTrialInfo = () => {
         </div>
 
         <div class="trust-item">
-          <span class="trust-icon">💯</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">
             <strong>500+ Enterprise Teams</strong>
             <span class="trust-subtext">Trust SalesTouch</span>
@@ -272,7 +272,7 @@ const toggleTrialInfo = () => {
         </div>
 
         <div class="trust-item">
-          <span class="trust-icon">⭐</span>
+          <span class="trust-icon"></span>
           <span class="trust-text">
             <strong>4.9/5 G2 Rating</strong>
             <span class="trust-subtext">Customer satisfaction</span>
@@ -282,7 +282,7 @@ const toggleTrialInfo = () => {
 
       <!-- Money-back Guarantee -->
       <div class="guarantee-section">
-        <div class="guarantee-icon">💰</div>
+        <div class="guarantee-icon"></div>
         <div class="guarantee-content">
           <h3 class="guarantee-title">100% Money-Back Guarantee</h3>
           <p class="guarantee-text">

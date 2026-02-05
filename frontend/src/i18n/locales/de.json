@@ -27,20 +27,24 @@
         "freeTrialNote": "14-tägige kostenlose Testversion der Pro-Funktionen enthalten."
     },
     "hero": {
-        "title": "Entfesseln Sie Ihr Potenzial mit dem weltweit ersten KI-Sales-Coach",
-        "subtitle": "Treten Sie dem Elite-Kreis bei. Meistern Sie die Kunst des Abschlusses mit einem Coach, der wie ein Top-Performer denkt.",
-        "cta": "SalesTouch erkunden",
-        "ctaSecondary": "SalesNail erkunden",
-        "badge": "Global Launch • 4-Wochen Transformation"
+        "title": "KI-Vertriebsassistent, damit neue Mitarbeiter wie Top-Closers handeln",
+        "subtitle": "Kein statisches CRM - ein Stratege und Assistent für High-Ticket-Teams. Agentischer Workflow: Training, Planung, Ausführung, Management.",
+        "cta": "SalesTouch öffnen",
+        "ctaSecondary": "Demo ansehen",
+        "badge": "KI-Vertriebsassistent",
+        "imageAlt": "Berufstätige Frau bei der Arbeit"
     },
     "features": {
-        "title": "Warum einen KI-Coach wählen?",
-        "simulation": "Echte Logik",
-        "simulationDesc": "Trainiert auf der tatsächlichen Logik zum Abschluss von Deals globaler Top-Vertriebsleiter.",
-        "smartPage": "Visuelle Dominanz",
-        "smartPageDesc": "Erstellen Sie Assets, die in jedem Sitzungssaal Aufmerksamkeit erregen.",
-        "fab": "Social Network Explosion",
-        "fabDesc": "Nutzen Sie die Kraft Ihres professionellen Netzwerks mit präzisen Botschaften."
+        "title": "Vier-in-eins Wachstums-Engine",
+        "subtitle": "Training, Planung, Ausführung, Management",
+        "training": "Training - 24/7 Elite-Coach",
+        "trainingDesc": "Immersive Simulationen, Voice-Interrupts und Radar-Reviews.",
+        "planning": "Planung - Strategieraum",
+        "planningDesc": "SPIN-Planung und FAB-Mapping für präzise Fragen.",
+        "execution": "Ausführung - Reibungsfreier Befehl",
+        "executionDesc": "Sprachkommandos, smarte Vorschläge, sofortige Dokumente.",
+        "management": "Management - Transparente Compliance",
+        "managementDesc": "LBS + Sprachprüfung und Prozess-Assetisierung."
     },
     "success": {
         "title": "Erfolgsgeschichten aus dem Coaching-Labor",
@@ -51,5 +55,104 @@
         "case1Desc": "Steigerung der Effizienz ihres Enterprise-Vertriebsteams um 300 % in 4 Wochen.",
         "case2": "FinServe Global",
         "case2Desc": "Abschluss von 3 großen Deals mit der Smart One-Page-Methodik."
+    },
+    "modules": {
+        "title": "KI-Vertriebsassistent",
+        "subtitle": "Alles, was Ihr Team für die tägliche Vertriebsarbeit mit Präzision braucht.",
+        "items": {
+            "workbench": {
+                "title": "Vertriebsarbeitsplatz",
+                "desc": "Erfassen Sie tägliche Vertriebsarbeit schnell und teilen Sie sie im Team."
+            },
+            "productEntry": {
+                "title": "Produktdaten erfassen",
+                "desc": "Verwalten Sie Produktdossiers und laden Sie Verkaufsassets hoch."
+            },
+            "productBrowse": {
+                "title": "Produktbibliothek",
+                "desc": "Durchsuchen Sie Spezifikationen, Materialien und Verkaufsunterlagen."
+            },
+            "customerPipeline": {
+                "title": "Kunden & Chancen",
+                "desc": "Visualisieren Sie Pipeline-Gesundheit und Chancenstatus."
+            },
+            "spinPlan": {
+                "title": "SPIN-Besuchsplan",
+                "desc": "Erstellen Sie strukturierte Besuchspläne basierend auf Produkt und Kunde."
+            },
+            "pptStudio": {
+                "title": "PPT-Studio",
+                "desc": "KI-gestützte Folienerstellung mit wiederverwendbaren Vorlagen."
+            },
+            "voiceBot": {
+                "title": "KI-Sprach-Rollenspiel-Bot",
+                "desc": "Erstellen Sie Rollenspiel-Bots für realistisches Training."
+            },
+            "voiceTraining": {
+                "title": "Mein Sprachtraining",
+                "desc": "Überprüfen und verfeinern Sie aufgezeichnete Übungssitzungen."
+            },
+            "assistantChat": {
+                "title": "KI-Assistent-Chat",
+                "desc": "Stellen Sie Fragen und erhalten Sie sofortige Vertriebsunterstützung."
+            },
+            "managerView": {
+                "title": "Manager-Ansicht",
+                "desc": "Team-Dashboard und Performance-Insights."
+            },
+            "b2bFlow": {
+                "title": "B2B-Vertriebsprozess konfigurieren",
+                "desc": "Best-Practice-B2B-Workflows für Ihr Team konfigurieren."
+            }
+        }
+    },
+    "roles": {
+        "title": "Mehrrollen-Kollaboration",
+        "subtitle": "ReAct-Agenten verbinden Rollen mit der passenden Intelligenz.",
+        "items": {
+            "salesRep": {
+                "title": "Vertrieb - Commander",
+                "desc": "Sprechen, planen, dokumentieren und Risiken prüfen."
+            },
+            "salesManager": {
+                "title": "Manager - Coach",
+                "desc": "Radar-Coaching und echte Besuchs-Transparenz."
+            },
+            "marketing": {
+                "title": "Marketing/Produkt - Arsenal",
+                "desc": "FAB-Bibliothek und Prompts für das Feld."
+            },
+            "owner": {
+                "title": "Inhaber - Visionär",
+                "desc": "Entscheidungen auf Basis sauberer Felddaten."
+            },
+            "externalConsultant": {
+                "title": "Berater - Optimierer",
+                "desc": "Agent-Workflows für Best Practices konfigurieren."
+            }
+        }
+    },
+    "scenarios": {
+        "title": "Gewinne den kritischen Moment",
+        "subtitle": "Szenario-Agenten für Vertriebsentscheidungen mit hohem Einsatz.",
+        "items": {
+            "tob": {
+                "title": "Komplexes B2B - im Boardroom gewinnen",
+                "desc": "Vorab-Analyse, SPIN-Fragen und PPTs aus Kundenbedürfnissen."
+            },
+            "toc": {
+                "title": "High-Ticket B2C - Vertrauen gewinnen",
+                "desc": "Voice-Rollenspiele, smarte Vorschläge, Follow-up Support."
+            },
+            "product": {
+                "title": "Produktlaunch - am Start gewinnen",
+                "desc": "Auto-FAB-Karten aus Technikdokumenten mit Belegen."
+            }
+        }
+    },
+    "footer": {
+        "tagline": "Globale Experten-Edition – Plattform für Enterprise-Vertriebsbeschleunigung",
+        "compliance": "Compliance",
+        "copy": "© 2026 SalesTouch. Alle Rechte vorbehalten. Für globale Unternehmen entwickelt."
     }
 }

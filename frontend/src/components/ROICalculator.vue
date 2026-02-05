@@ -140,7 +140,7 @@ Get started: https://salestouch.northamerica/start
       <!-- Header -->
       <div class="calculator-header">
         <h2 class="calculator-title">
-          <span class="title-icon">📊</span>
+          <span class="title-icon"></span>
           ROI Calculator
         </h2>
         <p class="calculator-subtitle">
@@ -268,7 +268,7 @@ Get started: https://salestouch.northamerica/start
           </div>
 
           <button @click="resetToDefaults" class="reset-button">
-            🔄 Reset to Defaults
+             Reset to Defaults
           </button>
         </div>
 
@@ -284,7 +284,7 @@ Get started: https://salestouch.northamerica/start
                 <span class="comparison-label">Current Monthly</span>
                 <span class="comparison-value">{{ formatCurrency(currentMonthlyRevenue) }}</span>
               </div>
-              <div class="comparison-arrow">→</div>
+              <div class="comparison-arrow"></div>
               <div class="comparison-item target">
                 <span class="comparison-label">Target Monthly</span>
                 <span class="comparison-value highlight">{{ formatCurrency(targetMonthlyRevenue) }}</span>
@@ -354,10 +354,10 @@ Get started: https://salestouch.northamerica/start
           <!-- Action Buttons -->
           <div class="action-buttons">
             <button @click="copyResults" class="action-button primary">
-              📋 Copy Results
+               Copy Results
             </button>
             <button class="action-button secondary">
-              🚀 Start Free Trial
+               Start Free Trial
             </button>
           </div>
         </div>

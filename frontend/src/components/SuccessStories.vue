@@ -1,33 +1,51 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+const props = defineProps<{
+  title?: string
+  subtitle?: string
+}>()
+
 const { t } = useI18n()
 
-const cases = [
+const defaultCases = [
   {
     key: 'case1',
     metric: '+300%',
     metricLabel: 'stat1',
-    logo: '🏢' 
+    logo: 'CASE1'
   },
   {
     key: 'case2',
     metric: '$2M+',
     metricLabel: 'stat2',
-    logo: '💼'
+    logo: 'CASE2'
   }
 ]
+
+const displayTitle = computed(() => props.title || t('success.title'))
+const displaySubtitle = computed(() => props.subtitle || t('success.subtitle'))
+
+const companyList = computed(() => null)
 </script>
 
 <template>
-  <section class="success-section">
+  <section class="success-section" id="success">
     <div class="premium-container">
       <div class="title-wrapper">
-        <h2 class="section-title">{{ t('success.title') }}</h2>
-        <p class="section-subtitle">{{ t('success.subtitle') }}</p>
+        <h2 class="section-title">{{ displayTitle }}</h2>
+        <p class="section-subtitle">{{ displaySubtitle }}</p>
       </div>
       
+      <div v-if="companyList" class="logo-row">
+        <span v-for="company in companyList" :key="company" class="logo-pill glass-panel">
+          {{ company }}
+        </span>
+      </div>
+
       <div class="cases-grid">
-        <div v-for="c in cases" :key="c.key" class="case-card glass-panel">
+        <div v-for="c in defaultCases" :key="c.key" class="case-card glass-panel">
           <div class="case-header">
             <div class="case-logo">{{ c.logo }}</div>
             <div class="case-metric-wrapper">
@@ -74,6 +92,21 @@ const cases = [
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+}
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo-pill {
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .glass-panel {
