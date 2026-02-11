@@ -3,7 +3,7 @@
  * Handles ROI calculation, dashboard data, and case studies for North American market
  */
 
-import { ROIRequest, ROICalculation, DashboardData, CaseStudiesResult, CaseStudy } from '../types/na'
+import type { ROIRequest, ROICalculation, DashboardData, CaseStudiesResult, CaseStudy } from '../types/na.js'
 
 /**
  * Calculate ROI based on sales team parameters
@@ -502,5 +502,5 @@ export function getNorthAmericanTimezone(): string {
     'America/Vancouver'
   ]
 
-  return commonTimezones[0] // Default to EST
+  return commonTimezones[0] ?? 'America/New_York' // Default to EST
 }

@@ -101,8 +101,14 @@ export interface CaseStudy {
   industry: string
   size: string
   location: string
-  challenge: string
-  solution: string
+  challenge: {
+    problem: string
+    impact: string
+  }
+  solution: {
+    tools: string[]
+    implementationTime: string
+  }
   results: {
     revenueIncrease: string
     closeRateImprovement: string

@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import naRoutes from './routes/naRoutes';
+import naRoutes from './routes/naRoutes.js';
 
 dotenv.config();
 

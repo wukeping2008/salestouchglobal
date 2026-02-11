@@ -1,6 +1,6 @@
 import express from 'express'
-import { ROIRequest, ROICalculation, DashboardData, CaseStudy } from '../types'
-import { calculateROI, getDashboardData, getNorthAmericanCaseStudies } from '../services/northAmericanService'
+import type { ROIRequest, ROICalculation, DashboardData } from '../types/na.js'
+import { calculateROI, getDashboardData, getNorthAmericanCaseStudies } from '../services/northAmericanService.js'
 
 const router = express.Router()
 
@@ -172,7 +172,7 @@ router.get('/case-studies/:id', async (req, res) => {
     }
 
     // Get all case studies and find the specific one
-    const result = await getNorthAmericanCaseStudies(null, 1000, 0)
+    const result = await getNorthAmericanCaseStudies(undefined, 1000, 0)
     const caseStudy = result.caseStudies.find(cs => cs.id === caseStudyId)
 
     if (!caseStudy) {
