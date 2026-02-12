@@ -4,3 +4,8 @@ dist/
 .vscode/
 .DS_Store
 *.log
+tmp/
+src/**/*.vue.js
+src/i18n/locales/*.js
+*.backup.vue
+TEST_*.html

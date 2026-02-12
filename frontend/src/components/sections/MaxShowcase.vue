@@ -1,0 +1,679 @@
+<template>
+  <section id="max-demo" class="max-showcase">
+    <div class="section-header">
+      <h2 class="section-title">{{ t('max.title') }}</h2>
+      <p class="section-subtitle">{{ t('max.subtitle') }}</p>
+    </div>
+
+    <div class="demo-container">
+      <div class="demo-controls">
+        <button
+          v-for="step in 3"
+          :key="step"
+          :class="['step-button', { active: currentStep === step }]"
+          @click="setStep(step)"
+        >
+          <span class="step-number">{{ step }}</span>
+          <span class="step-title">{{ t(`max.step${step}Title`) }}</span>
+        </button>
+      </div>
+
+      <div class="demo-content">
+        <div class="demo-grid">
+          <!-- Left: Screen Preview -->
+          <div class="screen-preview">
+            <div class="screen-header">
+              <div class="screen-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="screen-title">{{ t(`max.step${currentStep}Title`) }}</div>
+            </div>
+            <div class="screen-body">
+              <div v-if="currentStep === 1" class="step-visual">
+                <div class="email-preview">
+                  <div class="email-header">
+                    <div class="email-avatar">👤</div>
+                    <div class="email-meta">
+                      <div class="email-subject">{{ t('max.step1Visual.subject') }}</div>
+                      <div class="email-from">{{ t('max.step1Visual.from') }}</div>
+                    </div>
+                  </div>
+                  <div class="email-body">
+                    <p>{{ t('max.step1Visual.content') }}</p>
+                  </div>
+                  <div class="analysis-badge">
+                    <span class="badge-icon">🤖</span>
+                    <span>{{ t('max.step1Visual.analyzing') }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div v-if="currentStep === 2" class="step-visual">
+                <div class="suggestions-container">
+                  <div
+                    v-for="(_suggestion, idx) in 3"
+                    :key="idx"
+                    class="suggestion-card"
+                    :style="{ animationDelay: `${idx * 0.1}s` }"
+                  >
+                    <div class="suggestion-header">
+                      <span class="suggestion-icon">{{ ['💡', '📊', '🎯'][idx] }}</span>
+                      <span class="suggestion-type">{{ t(`max.step2Visual.suggestion${idx + 1}.type`) }}</span>
+                    </div>
+                    <div class="suggestion-text">{{ t(`max.step2Visual.suggestion${idx + 1}.text`) }}</div>
+                    <div class="suggestion-confidence">
+                      <div class="confidence-bar">
+                        <div class="confidence-fill" :style="{ width: ['95%', '88%', '92%'][idx] }"></div>
+                      </div>
+                      <span class="confidence-label">{{ ['95%', '88%', '92%'][idx] }} {{ t('max.step2Visual.confidence') }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div v-if="currentStep === 3" class="step-visual">
+                <div class="action-result">
+                  <div class="result-header">
+                    <span class="result-icon">✓</span>
+                    <span class="result-status">{{ t('max.step3Visual.status') }}</span>
+                  </div>
+                  <div class="result-details">
+                    <div class="result-item">
+                      <span class="result-label">{{ t('max.step3Visual.action') }}</span>
+                      <span class="result-value">{{ t('max.step3Visual.actionValue') }}</span>
+                    </div>
+                    <div class="result-item">
+                      <span class="result-label">{{ t('max.step3Visual.time') }}</span>
+                      <span class="result-value">{{ t('max.step3Visual.timeValue') }}</span>
+                    </div>
+                    <div class="result-item">
+                      <span class="result-label">{{ t('max.step3Visual.impact') }}</span>
+                      <span class="result-value">{{ t('max.step3Visual.impactValue') }}</span>
+                    </div>
+                  </div>
+                  <div class="next-steps">
+                    <div class="next-step-title">{{ t('max.step3Visual.nextSteps') }}</div>
+                    <div
+                      v-for="i in 2"
+                      :key="i"
+                      class="next-step-item"
+                    >
+                      {{ t(`max.step3Visual.nextStep${i}`) }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Step Description -->
+          <div class="step-description">
+            <h3 class="description-title">{{ t(`max.step${currentStep}Title`) }}</h3>
+            <p class="description-text">{{ t(`max.step${currentStep}Desc`) }}</p>
+            <div class="description-features">
+              <div
+                v-for="i in 3"
+                :key="i"
+                class="feature-item"
+              >
+                <span class="feature-check">✓</span>
+                <span class="feature-text">{{ t(`max.step${currentStep}Feature${i}`) }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-progress">
+          <div
+            v-for="step in 3"
+            :key="step"
+            :class="['progress-dot', { active: currentStep === step }]"
+            @click="setStep(step)"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+const currentStep = ref(1)
+let autoPlayInterval: ReturnType<typeof setInterval> | null = null
+
+const setStep = (step: number) => {
+  currentStep.value = step
+  resetAutoPlay()
+}
+
+const nextStep = () => {
+  currentStep.value = currentStep.value >= 3 ? 1 : currentStep.value + 1
+}
+
+const startAutoPlay = () => {
+  autoPlayInterval = setInterval(nextStep, 5000)
+}
+
+const resetAutoPlay = () => {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval)
+  }
+  startAutoPlay()
+}
+
+onMounted(() => {
+  startAutoPlay()
+})
+
+onUnmounted(() => {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval)
+  }
+})
+</script>
+
+<style scoped>
+.max-showcase {
+  padding: 6rem 2rem;
+  background: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.demo-container {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.demo-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.step-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.step-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.step-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+.step-button.active .step-number {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.step-title {
+  font-weight: 500;
+}
+
+.demo-content {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.screen-preview {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.screen-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.screen-title {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  flex: 1;
+  text-align: center;
+}
+
+.screen-body {
+  padding: 2rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-visual {
+  width: 100%;
+}
+
+/* Step 1: Email Preview */
+.email-preview {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.email-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.email-meta {
+  flex: 1;
+}
+
+.email-subject {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.email-from {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.email-body {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.analysis-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 8px;
+  color: #a5b4fc;
+  font-size: 0.875rem;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.badge-icon {
+  font-size: 1rem;
+}
+
+/* Step 2: Suggestions */
+.suggestions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.suggestion-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  animation: slideInRight 0.5s ease backwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.suggestion-icon {
+  font-size: 1.25rem;
+}
+
+.suggestion-type {
+  font-size: 0.875rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.suggestion-text {
+  color: #d1d5db;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.suggestion-confidence {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.confidence-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.confidence-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+/* Step 3: Action Result */
+.action-result {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #667eea;
+}
+
+.result-status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-label {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.result-value {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.next-steps {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.next-step-title {
+  font-size: 0.875rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.next-step-item {
+  padding: 0.75rem 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  color: #d1d5db;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Step Description */
+.step-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.description-text {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.description-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.feature-check {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.feature-text {
+  color: #d1d5db;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Progress Dots */
+.demo-progress {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progress-dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.progress-dot.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 32px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .max-showcase {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .demo-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .step-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .demo-content {
+    padding: 1.5rem;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .screen-body {
+    min-height: 300px;
+    padding: 1rem;
+  }
+
+  .description-title {
+    font-size: 1.5rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+  }
+}
+</style>
