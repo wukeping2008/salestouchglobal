@@ -1,5 +1,6 @@
 <template>
   <section class="cta-section">
+    <div class="cta-bg-image"></div>
     <div class="glow-orb"></div>
     <div class="container">
       <div class="cta-content">
@@ -38,6 +39,17 @@ const { t } = useI18n();
   background: #0f0f1e;
   padding: 8rem 0;
   overflow: hidden;
+}
+
+.cta-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/hero-team.jpg') center/cover no-repeat;
+  opacity: 0.12;
+  filter: saturate(0.5) brightness(0.6);
 }
 
 .glow-orb {

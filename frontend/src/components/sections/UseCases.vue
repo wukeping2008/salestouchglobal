@@ -13,31 +13,46 @@
           :class="['tab-button', { active: activeTab === tab.id }]"
           @click="activeTab = tab.id"
         >
-          <span class="tab-icon">{{ tab.icon }}</span>
+          <span class="tab-icon" v-html="tab.icon"></span>
           <span class="tab-label">{{ t(`useCases.${tab.id}.title`) }}</span>
         </button>
       </div>
 
       <div class="content-card">
-        <div class="card-icon">
-          <span>{{ tabs.find(t => t.id === activeTab)?.icon }}</span>
+        <div class="card-text">
+          <div class="card-icon">
+            <span v-html="tabs.find(t => t.id === activeTab)?.icon"></span>
+          </div>
+          <h3 class="card-title">{{ t(`useCases.${activeTab}.title`) }}</h3>
+          <p class="card-description">{{ t(`useCases.${activeTab}.desc`) }}</p>
+          <ul class="feature-list">
+            <li class="feature-item">
+              <span class="feature-bullet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>{{ t(`useCases.${activeTab}.f1`) }}</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-bullet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>{{ t(`useCases.${activeTab}.f2`) }}</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-bullet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>{{ t(`useCases.${activeTab}.f3`) }}</span>
+            </li>
+          </ul>
         </div>
-        <h3 class="card-title">{{ t(`useCases.${activeTab}.title`) }}</h3>
-        <p class="card-description">{{ t(`useCases.${activeTab}.desc`) }}</p>
-        <ul class="feature-list">
-          <li class="feature-item">
-            <span class="feature-bullet">✓</span>
-            <span>{{ t(`useCases.${activeTab}.f1`) }}</span>
-          </li>
-          <li class="feature-item">
-            <span class="feature-bullet">✓</span>
-            <span>{{ t(`useCases.${activeTab}.f2`) }}</span>
-          </li>
-          <li class="feature-item">
-            <span class="feature-bullet">✓</span>
-            <span>{{ t(`useCases.${activeTab}.f3`) }}</span>
-          </li>
-        </ul>
+        <div class="card-image">
+          <img
+            :src="tabs.find(t => t.id === activeTab)?.image"
+            :alt="t(`useCases.${activeTab}.title`)"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -50,10 +65,10 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const tabs = [
-  { id: 'sales', icon: '💼' },
-  { id: 'managers', icon: '📊' },
-  { id: 'trainers', icon: '🎓' },
-  { id: 'medical', icon: '⚕️' }
+  { id: 'sales', image: '/images/usecase-sales.jpg', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>' },
+  { id: 'managers', image: '/images/usecase-managers.jpg', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>' },
+  { id: 'trainers', image: '/images/usecase-trainers.jpg', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10l-10-5L2 10l10 5 10-5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>' },
+  { id: 'medical', image: '/images/usecase-medical.jpg', icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-3-3v6"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>' }
 ];
 
 const activeTab = ref('sales');
@@ -133,10 +148,15 @@ const activeTab = ref('sales');
 }
 
 .tab-icon {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: currentColor;
 }
 
 .content-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(102, 126, 234, 0.3);
@@ -144,6 +164,32 @@ const activeTab = ref('sales');
   padding: 3rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
+  align-items: center;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85) saturate(0.9);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.content-card:hover .card-image img {
+  transform: scale(1.03);
+  filter: brightness(0.9) saturate(1);
 }
 
 .card-icon {
@@ -154,9 +200,20 @@ const activeTab = ref('sales');
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  color: #ffffff;
   margin-bottom: 2rem;
   box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.card-icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon svg {
+  width: 40px;
+  height: 40px;
 }
 
 .card-title {
@@ -201,8 +258,6 @@ const activeTab = ref('sales');
   border: 1px solid #667eea;
   border-radius: 50%;
   color: #667eea;
-  font-size: 0.875rem;
-  font-weight: 700;
   flex-shrink: 0;
 }
 
@@ -241,7 +296,13 @@ const activeTab = ref('sales');
   }
 
   .content-card {
+    grid-template-columns: 1fr;
     padding: 2rem;
+  }
+
+  .card-image {
+    order: -1;
+    aspect-ratio: 16 / 9;
   }
 
   .card-icon {

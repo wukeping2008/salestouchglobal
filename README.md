@@ -58,11 +58,25 @@ frontend/src/
 └── main.ts
 ```
 
+### Image Assets (`public/images/`)
+
+| File | Size | Usage |
+|------|------|-------|
+| `hero-team.jpg` | 299KB | Hero + CTA background (Ken Burns animation) |
+| `testimonial-1.jpg` | 12KB | SocialProof testimonial avatar |
+| `testimonial-2.jpg` | 8KB | SocialProof testimonial avatar |
+| `usecase-sales.jpg` | 84KB | UseCases sales scenario |
+| `usecase-managers.jpg` | 51KB | UseCases management scenario |
+| `usecase-trainers.jpg` | 72KB | UseCases training scenario |
+| `usecase-medical.jpg` | 43KB | UseCases medical scenario |
+
 ### Design System
 
 - **Theme**: Dark (#0f0f1e / #1a1a2e) with purple gradient (#667eea -> #764ba2)
+- **Icons**: Inline SVGs via `v-html` from i18n files, sized with CSS `:deep(svg)` rules
 - **Glass morphism**: `backdrop-filter: blur()` + semi-transparent backgrounds
 - **CSS Custom Properties**: Design tokens for colors, gradients, shadows, radii, transitions
+- **Background Effects**: Ken Burns animation, floating gradient orbs, vignette overlay
 - **Animations**: Scroll-reveal (Intersection Observer), hover lift, pulse effects
 - **Responsive**: 480px / 768px / 1024px / 1400px breakpoints
 - **Accessibility**: `prefers-reduced-motion` support
@@ -111,8 +125,10 @@ dist/
 | 1. Initial Build | 2026-01-28 | Vue 3 + Vite + i18n base, 7 components |
 | 2. Max-Focused | 2026-02-12 | Simplified to 3 components (HeroMax / MaxInAction / WhyMax) |
 | 3. Full Platform | 2026-02-13 | Complete redesign: 9 sections, 274 i18n keys, scroll animations, design tokens |
+| 3.6 Visual Upgrade | 2026-02-13 | Emoji → SVG icons, real people photos, hero background redesign |
 
 Phase 3 changes: 45 files, +4,394 / -10,467 lines (cleaned ~37 legacy files, added 11 new components).
+Phase 3.6: Replaced all emoji with inline SVG icons (15 i18n + component inline), added 7 professional photos (Unsplash), redesigned hero background (Ken Burns + floating orbs), enhanced UseCases with two-column photo layout.
 
 ## Roadmap
 
@@ -121,6 +137,9 @@ Phase 3 changes: 45 files, +4,394 / -10,467 lines (cleaned ~37 legacy files, add
 - [x] Scroll-reveal animations (Intersection Observer)
 - [x] CSS design token system
 - [x] Production build passing (0 errors)
+- [x] SVG icon system (emoji → inline SVG with `:deep(svg)` sizing)
+- [x] Professional photos (7 images, Unsplash)
+- [x] Hero background redesign (Ken Burns + gradient orbs)
 - [ ] Cross-browser testing (Chrome / Safari / Firefox)
 - [ ] Mobile device testing (iOS / Android)
 - [ ] Lighthouse performance audit (target >90)

@@ -1,6 +1,9 @@
 <template>
   <section class="hero-section">
-    <div class="animated-background"></div>
+    <div class="hero-bg-image"></div>
+    <div class="hero-gradient-overlay"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
     <div class="hero-content">
       <div class="badge-pill">
         {{ t('hero.badge') }}
@@ -33,15 +36,21 @@
 
       <div class="trust-badges">
         <div class="trust-badge">
-          <span class="trust-icon">✓</span>
+          <span class="trust-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
           <span class="trust-text">{{ t('hero.trustBadge1') }}</span>
         </div>
         <div class="trust-badge">
-          <span class="trust-icon">✓</span>
+          <span class="trust-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
           <span class="trust-text">{{ t('hero.trustBadge2') }}</span>
         </div>
         <div class="trust-badge">
-          <span class="trust-icon">✓</span>
+          <span class="trust-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
           <span class="trust-text">{{ t('hero.trustBadge3') }}</span>
         </div>
       </div>
@@ -67,24 +76,65 @@ const { t } = useI18n()
   overflow: hidden;
 }
 
-.animated-background {
+.hero-gradient-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  opacity: 0.15;
-  animation: rotateGradient 15s ease infinite;
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 0%, rgba(15, 15, 30, 0.4) 50%, #0f0f1e 85%),
+    linear-gradient(180deg, rgba(15, 15, 30, 0.1) 0%, rgba(15, 15, 30, 0.5) 100%);
   z-index: 0;
 }
 
-@keyframes rotateGradient {
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  will-change: transform;
+}
+
+.hero-orb-1 {
+  width: 700px;
+  height: 700px;
+  top: -20%;
+  right: -15%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.5) 0%, transparent 70%);
+  animation: orbDrift1 20s ease-in-out infinite;
+}
+
+.hero-orb-2 {
+  width: 600px;
+  height: 600px;
+  bottom: -15%;
+  left: -12%;
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.4) 0%, transparent 70%);
+  animation: orbDrift2 25s ease-in-out infinite;
+}
+
+@keyframes orbDrift1 {
   0%, 100% {
-    transform: rotate(0deg) scale(1);
+    transform: translate(0, 0) scale(1);
   }
-  50% {
-    transform: rotate(180deg) scale(1.2);
+  33% {
+    transform: translate(-60px, 50px) scale(1.1);
+  }
+  66% {
+    transform: translate(40px, -30px) scale(0.9);
+  }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(50px, -40px) scale(1.12);
+  }
+  66% {
+    transform: translate(-35px, 25px) scale(0.88);
   }
 }
 
@@ -216,15 +266,50 @@ const { t } = useI18n()
   transform: translateY(-2px);
 }
 
+.hero-bg-image {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  background: url('/images/hero-team.jpg') center/cover no-repeat;
+  opacity: 0.35;
+  z-index: 0;
+  animation: kenBurns 30s ease-in-out infinite;
+  filter: saturate(0.7) brightness(0.8);
+}
+
+@keyframes kenBurns {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-1.5%, 1%);
+  }
+}
+
 .trust-icon {
   color: #667eea;
-  font-weight: bold;
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trust-text {
   color: #d1d5db;
   font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-image,
+  .hero-orb-1,
+  .hero-orb-2,
+  .hero-title,
+  .hero-subtitle,
+  .cta-buttons,
+  .trust-badges {
+    animation: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -257,6 +342,16 @@ const { t } = useI18n()
 
   .trust-badge {
     justify-content: center;
+  }
+
+  .hero-orb-1 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .hero-orb-2 {
+    width: 300px;
+    height: 300px;
   }
 }
 </style>

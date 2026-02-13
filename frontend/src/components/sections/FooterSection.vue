@@ -4,7 +4,17 @@
       <div class="footer-grid">
         <div class="footer-column brand-column">
           <div class="brand-logo">
-            <span class="logo-icon">✦</span>
+            <span class="logo-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" fill="url(#sparkle-grad)"/>
+                <defs>
+                  <linearGradient id="sparkle-grad" x1="2" y1="2" x2="22" y2="22">
+                    <stop offset="0%" stop-color="#667eea"/>
+                    <stop offset="100%" stop-color="#764ba2"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
             <span class="logo-text">SalesTouch.io</span>
           </div>
           <p class="tagline">{{ t('footer.tagline') }}</p>
@@ -91,11 +101,9 @@ const { t } = useI18n();
 }
 
 .logo-icon {
-  font-size: 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-text {

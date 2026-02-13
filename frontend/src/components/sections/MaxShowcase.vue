@@ -34,7 +34,9 @@
               <div v-if="currentStep === 1" class="step-visual">
                 <div class="email-preview">
                   <div class="email-header">
-                    <div class="email-avatar">👤</div>
+                    <div class="email-avatar">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
                     <div class="email-meta">
                       <div class="email-subject">{{ t('max.step1Visual.subject') }}</div>
                       <div class="email-from">{{ t('max.step1Visual.from') }}</div>
@@ -44,7 +46,9 @@
                     <p>{{ t('max.step1Visual.content') }}</p>
                   </div>
                   <div class="analysis-badge">
-                    <span class="badge-icon">🤖</span>
+                    <span class="badge-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><line x1="12" y1="7" x2="12" y2="11"/><circle cx="8" cy="16" r="1.5" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </span>
                     <span>{{ t('max.step1Visual.analyzing') }}</span>
                   </div>
                 </div>
@@ -59,7 +63,7 @@
                     :style="{ animationDelay: `${idx * 0.1}s` }"
                   >
                     <div class="suggestion-header">
-                      <span class="suggestion-icon">{{ ['💡', '📊', '🎯'][idx] }}</span>
+                      <span class="suggestion-icon" v-html="suggestionIcons[idx]"></span>
                       <span class="suggestion-type">{{ t(`max.step2Visual.suggestion${idx + 1}.type`) }}</span>
                     </div>
                     <div class="suggestion-text">{{ t(`max.step2Visual.suggestion${idx + 1}.text`) }}</div>
@@ -76,7 +80,9 @@
               <div v-if="currentStep === 3" class="step-visual">
                 <div class="action-result">
                   <div class="result-header">
-                    <span class="result-icon">✓</span>
+                    <span class="result-icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
                     <span class="result-status">{{ t('max.step3Visual.status') }}</span>
                   </div>
                   <div class="result-details">
@@ -118,7 +124,9 @@
                 :key="i"
                 class="feature-item"
               >
-                <span class="feature-check">✓</span>
+                <span class="feature-check">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
                 <span class="feature-text">{{ t(`max.step${currentStep}Feature${i}`) }}</span>
               </div>
             </div>
@@ -143,6 +151,12 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+const suggestionIcons = [
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>',
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>',
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
+]
 
 const currentStep = ref(1)
 let autoPlayInterval: ReturnType<typeof setInterval> | null = null
@@ -353,7 +367,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  color: #a5b4fc;
 }
 
 .email-meta {
@@ -400,7 +414,9 @@ onUnmounted(() => {
 }
 
 .badge-icon {
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #a5b4fc;
 }
 
 /* Step 2: Suggestions */
@@ -437,7 +453,9 @@ onUnmounted(() => {
 }
 
 .suggestion-icon {
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  color: #a5b4fc;
 }
 
 .suggestion-type {
@@ -593,9 +611,10 @@ onUnmounted(() => {
 
 .feature-check {
   color: #667eea;
-  font-weight: bold;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .feature-text {

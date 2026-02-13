@@ -196,10 +196,17 @@ const setActiveStep = (step: number) => {
 }
 
 .step-icon {
-  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
   margin-bottom: 1.5rem;
   color: #667eea;
   transition: transform 0.3s ease;
+}
+
+.step-icon :deep(svg) {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
 }
 
 .workflow-step.active .step-icon {
@@ -315,8 +322,9 @@ const setActiveStep = (step: number) => {
     padding: 1.5rem;
   }
 
-  .step-icon {
-    font-size: 2rem;
+  .step-icon :deep(svg) {
+    width: 28px;
+    height: 28px;
   }
 
   .step-title {

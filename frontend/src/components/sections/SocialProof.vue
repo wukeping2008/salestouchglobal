@@ -19,7 +19,13 @@
           <p class="quote-text">{{ t(`social.quote${i}.text`) }}</p>
           <div class="author-info">
             <div class="author-avatar">
-              {{ t(`social.quote${i}.name`).charAt(0) }}
+              <img
+                :src="`/images/testimonial-${i}.jpg`"
+                :alt="t(`social.quote${i}.name`)"
+                loading="lazy"
+                width="72"
+                height="72"
+              />
             </div>
             <div class="author-details">
               <div class="author-name">{{ t(`social.quote${i}.name`) }}</div>
@@ -170,17 +176,20 @@ const { t } = useI18n();
 }
 
 .author-avatar {
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
+  overflow: hidden;
   flex-shrink: 0;
+  border: 3px solid rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .author-details {
@@ -250,9 +259,8 @@ const { t } = useI18n();
   }
 
   .author-avatar {
-    width: 48px;
-    height: 48px;
-    font-size: 1.25rem;
+    width: 60px;
+    height: 60px;
   }
 
   .author-name {

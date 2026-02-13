@@ -55,6 +55,48 @@
 - [x] i18n 完整性通过（5 × 274 = 1370 行）
 - [x] Git 提交: `13ed60b` (45 files, +4,394 / -10,467)
 
+#### 3.6 视觉升级：Emoji → SVG + 真人图片 —— [已完成 2026-02-13]
+
+**目标**: 将所有 emoji 字符替换为专业内联 SVG 图标，添加真实人物图片，提升欧美市场专业感。
+
+**SVG 图标替换**:
+- [x] i18n 文件 15 个 icon 字段（problem×4 / platform×6 / workflow×5）全部替换为内联 SVG
+- [x] 5 个 locale 文件同步（en/zh/fr/de/es，SVG 无需翻译）
+- [x] 组件内联 emoji 替换：
+  - HeroSection.vue: ✓ → SVG checkmark（trust badges）
+  - MaxShowcase.vue: 👤🤖💡📊🎯✓ → SVG 图标
+  - UseCases.vue: 💼📊🎓⚕️✓ → SVG 图标（tabs + feature bullets）
+  - FooterSection.vue: ✦ → SVG gradient sparkle
+- [x] SVG 尺寸修复：i18n SVG 无 width/height → CSS `:deep(svg)` 统一约束
+  - ProblemStatement.vue: `.pain-icon :deep(svg)` 40px（mobile 32px）
+  - PlatformOverview.vue: `.capability-icon :deep(svg)` 40px（mobile 32px）
+  - WorkflowJourney.vue: `.step-icon :deep(svg)` 36px（mobile 28px）
+- [x] 保留语言切换器国旗 emoji（🇬🇧🇨🇳🇫🇷🇩🇪🇪🇸）— 标准 UI 实践
+
+**Hero 背景重设计**:
+- [x] 移除旋转渐变动画（180° 旋转效果不协调）
+- [x] 新增 Ken Burns 背景图动画（`/images/hero-team.jpg`, opacity 0.35, 30s 缓慢缩放平移）
+- [x] 新增两个浮动渐变光球（700/600px, radial-gradient, drift 动画）
+- [x] 新增渐变叠加层（radial-gradient 暗角 + 线性渐变，营造影院深度感）
+- [x] 经过 3 轮迭代优化背景清晰度（opacity 0.15 → 0.28 → 0.35）
+- [x] `prefers-reduced-motion` 无障碍支持
+
+**真人图片（7 张，Unsplash 免费商用）**:
+- [x] `hero-team.jpg` (299KB) — Hero + CTA 背景
+- [x] `testimonial-1.jpg` (12KB) — SocialProof 证言头像（专业女性）
+- [x] `testimonial-2.jpg` (8KB) — SocialProof 证言头像（专业男性）
+- [x] `usecase-sales.jpg` (84KB) — 销售场景
+- [x] `usecase-managers.jpg` (51KB) — 管理场景
+- [x] `usecase-trainers.jpg` (72KB) — 培训场景
+- [x] `usecase-medical.jpg` (43KB) — 医疗场景
+
+**组件布局增强**:
+- [x] SocialProof.vue: 证言头像放大 56→72px，增加边框 + 阴影
+- [x] UseCases.vue: 改为双栏 grid 布局（文本 + 场景配图），mobile 单栏图片置顶
+- [x] CTASection.vue: 新增低透明度背景团队图（opacity 0.12）
+
+**构建验证**: 前端 `npm run build` 通过，0 错误。
+
 ### **Phase 4: 测试与部署 —— [进行中]**
 
 - [ ] 跨浏览器测试（Chrome/Safari/Firefox）
@@ -99,11 +141,26 @@ components/
 └── shared/ (2 个)      → FeatureCard + AnimatedSection
 ```
 
+### 图片资源 (`public/images/`)
+
+```
+images/
+├── hero-team.jpg           (299KB) → Hero + CTA 背景
+├── testimonial-1.jpg        (12KB) → SocialProof 证言头像
+├── testimonial-2.jpg         (8KB) → SocialProof 证言头像
+├── usecase-sales.jpg        (84KB) → UseCases 销售场景
+├── usecase-managers.jpg     (51KB) → UseCases 管理场景
+├── usecase-trainers.jpg     (72KB) → UseCases 培训场景
+└── usecase-medical.jpg      (43KB) → UseCases 医疗场景
+```
+
 ### 设计系统
 
 - 深色主题: `#0f0f1e` / `#1a1a2e`
 - 品牌渐变: `#667eea` → `#764ba2`
 - 玻璃拟态: `backdrop-filter: blur()` + 半透明边框
+- 图标系统: 内联 SVG（`v-html` 渲染 + CSS `:deep(svg)` 尺寸控制）
+- 背景效果: Ken Burns 动画 + 浮动渐变光球 + 暗角叠加
 - 滚动动画: Intersection Observer fadeInUp
 - 响应式断点: 480px / 768px / 1024px / 1400px
 
@@ -126,4 +183,4 @@ npm run preview   # 预览生产版本
 ```
 
 ---
-*最后更新时间: 2026-02-13*
+*最后更新时间: 2026-02-13 (Phase 3.6 视觉升级)*

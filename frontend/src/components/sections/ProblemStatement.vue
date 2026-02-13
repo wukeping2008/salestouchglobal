@@ -86,9 +86,16 @@ const { t } = useI18n()
 }
 
 .pain-icon {
-  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
   margin-bottom: 1.5rem;
   color: #667eea;
+}
+
+.pain-icon :deep(svg) {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .pain-title {
@@ -138,8 +145,9 @@ const { t } = useI18n()
     padding: 2rem;
   }
 
-  .pain-icon {
-    font-size: 2rem;
+  .pain-icon :deep(svg) {
+    width: 32px;
+    height: 32px;
   }
 
   .pain-title {
