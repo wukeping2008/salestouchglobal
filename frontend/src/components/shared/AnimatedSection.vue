@@ -6,15 +6,18 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { trackSectionView } from '../../analytics'
 
 interface Props {
   threshold?: number
   rootMargin?: string
+  sectionName?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   threshold: 0.15,
   rootMargin: '0px 0px -50px 0px',
+  sectionName: '',
 })
 
 const sectionRef = ref<HTMLElement | null>(null)
@@ -30,6 +33,9 @@ onMounted(() => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           isVisible.value = true
+          if (props.sectionName) {
+            trackSectionView(props.sectionName)
+          }
           observer?.unobserve(entry.target)
         }
       })

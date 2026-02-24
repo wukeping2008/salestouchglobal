@@ -15,8 +15,8 @@ tsconfig.tsbuildinfo
 vite.config.js
 vite.config.d.ts
 src/**/*.vue.js
-src/main.js
-src/i18n/index.js
+src/**/*.js
+!src/**/*.config.js
 
 # Editor directories and files
 .vscode/*

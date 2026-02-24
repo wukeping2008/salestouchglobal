@@ -13,10 +13,11 @@
             target="_blank"
             rel="noopener"
             class="cta-button-primary"
+            @click="trackCTAClick('start_free_trial', 'cta_section')"
           >
             {{ t('cta.button') }}
           </a>
-          <a href="#" class="cta-button-secondary">
+          <a href="#" class="cta-button-secondary" @click="trackCTAClick('schedule_demo', 'cta_section')">
             {{ t('cta.secondary') }}
           </a>
         </div>
@@ -28,9 +29,10 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
+import { useI18n } from 'vue-i18n'
+import { trackCTAClick } from '../../analytics'
 
-const { t } = useI18n();
+const { t } = useI18n()
 </script>
 
 <style scoped>

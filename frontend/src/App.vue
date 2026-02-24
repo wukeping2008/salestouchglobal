@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { trackLanguageSwitch, trackCTAClick } from './analytics'
 import HeroSection from './components/sections/HeroSection.vue'
 import ProblemStatement from './components/sections/ProblemStatement.vue'
 import PlatformOverview from './components/sections/PlatformOverview.vue'
@@ -29,8 +30,10 @@ const currentLanguage = computed(() => {
 })
 
 const changeLanguage = (code: string) => {
+  const previousLang = locale.value
   locale.value = code
   isLangMenuOpen.value = false
+  trackLanguageSwitch(previousLang, code)
 }
 </script>
 
@@ -72,6 +75,7 @@ const changeLanguage = (code: string) => {
             target="_blank"
             rel="noopener"
             class="nav-cta"
+            @click="trackCTAClick('nav_cta', 'navbar')"
           >
             {{ t('nav.ctaText') }}
           </a>
@@ -82,25 +86,25 @@ const changeLanguage = (code: string) => {
     <!-- Main Content -->
     <main>
       <HeroSection />
-      <AnimatedSection>
+      <AnimatedSection section-name="problem_statement">
         <ProblemStatement />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection section-name="platform_overview">
         <PlatformOverview />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection section-name="max_showcase">
         <MaxShowcase />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection section-name="workflow_journey">
         <WorkflowJourney />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection section-name="use_cases">
         <UseCases />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection section-name="social_proof">
         <SocialProof />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection section-name="cta_section">
         <CTASection />
       </AnimatedSection>
     </main>

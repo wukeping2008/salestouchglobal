@@ -23,12 +23,14 @@
           target="_blank"
           rel="noopener"
           class="btn btn-primary"
+          @click="trackCTAClick('start_free_trial', 'hero')"
         >
           {{ t('hero.ctaPrimary') }}
         </a>
         <a
           href="#max-demo"
           class="btn btn-secondary"
+          @click="trackCTAClick('see_max_demo', 'hero')"
         >
           {{ t('hero.ctaSecondary') }}
         </a>
@@ -60,6 +62,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { trackCTAClick } from '../../analytics'
 
 const { t } = useI18n()
 </script>
