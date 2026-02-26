@@ -63,16 +63,29 @@
                     :style="{ animationDelay: `${idx * 0.1}s` }"
                   >
                     <div class="suggestion-header">
-                      <span class="suggestion-icon" v-html="suggestionIcons[idx]"></span>
-                      <span class="suggestion-type">{{ t(`max.step2Visual.suggestion${idx + 1}.type`) }}</span>
+                      <div class="skill-confidence-ring">
+                        <svg width="48" height="48" viewBox="0 0 48 48" class="confidence-circle">
+                          <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
+                          <circle cx="24" cy="24" r="20" fill="none" stroke="url(#gradient)" stroke-width="3"
+                                  :stroke-dasharray="`${[95, 88, 92][idx] * 1.256} 125.6`"
+                                  stroke-linecap="round"
+                                  transform="rotate(-90 24 24)"
+                                  class="confidence-progress"/>
+                          <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#667eea"/>
+                              <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <span class="confidence-percent">{{ ['95', '88', '92'][idx] }}</span>
+                      </div>
+                      <div class="suggestion-info">
+                        <span class="suggestion-icon" v-html="suggestionIcons[idx]"></span>
+                        <span class="suggestion-type">{{ t(`max.step2Visual.suggestion${idx + 1}.type`) }}</span>
+                      </div>
                     </div>
                     <div class="suggestion-text">{{ t(`max.step2Visual.suggestion${idx + 1}.text`) }}</div>
-                    <div class="suggestion-confidence">
-                      <div class="confidence-bar">
-                        <div class="confidence-fill" :style="{ width: ['95%', '88%', '92%'][idx] }"></div>
-                      </div>
-                      <span class="confidence-label">{{ ['95%', '88%', '92%'][idx] }} {{ t('max.step2Visual.confidence') }}</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -85,18 +98,25 @@
                     </span>
                     <span class="result-status">{{ t('max.step3Visual.status') }}</span>
                   </div>
-                  <div class="result-details">
-                    <div class="result-item">
-                      <span class="result-label">{{ t('max.step3Visual.action') }}</span>
-                      <span class="result-value">{{ t('max.step3Visual.actionValue') }}</span>
+                  <div class="proposal-preview">
+                    <div class="proposal-header">
+                      <div class="proposal-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+                      </div>
+                      <div class="proposal-meta">
+                        <div class="proposal-title">Northstar Medical - Pilot Pricing Proposal</div>
+                        <div class="proposal-subtitle">Generated in 28 seconds</div>
+                      </div>
                     </div>
-                    <div class="result-item">
-                      <span class="result-label">{{ t('max.step3Visual.time') }}</span>
-                      <span class="result-value">{{ t('max.step3Visual.timeValue') }}</span>
-                    </div>
-                    <div class="result-item">
-                      <span class="result-label">{{ t('max.step3Visual.impact') }}</span>
-                      <span class="result-value">{{ t('max.step3Visual.impactValue') }}</span>
+                    <div class="proposal-actions">
+                      <button class="proposal-btn proposal-btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        <span>Copy Shareable Link</span>
+                      </button>
+                      <button class="proposal-btn proposal-btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Export PDF</span>
+                      </button>
                     </div>
                   </div>
                   <div class="next-steps">
@@ -448,8 +468,40 @@ onUnmounted(() => {
 .suggestion-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 0.75rem;
+}
+
+.skill-confidence-ring {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.confidence-circle {
+  transform-origin: center;
+}
+
+.confidence-progress {
+  transition: stroke-dasharray 0.8s ease;
+}
+
+.confidence-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.suggestion-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
 }
 
 .suggestion-icon {
@@ -467,34 +519,6 @@ onUnmounted(() => {
 .suggestion-text {
   color: #d1d5db;
   line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.suggestion-confidence {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.confidence-bar {
-  flex: 1;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.confidence-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-  border-radius: 3px;
-  transition: width 0.5s ease;
-}
-
-.confidence-label {
-  font-size: 0.75rem;
-  color: #9ca3af;
-  white-space: nowrap;
 }
 
 /* Step 3: Action Result */
@@ -532,27 +556,87 @@ onUnmounted(() => {
   color: #ffffff;
 }
 
-.result-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.proposal-preview {
   margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
 }
 
-.result-item {
+.proposal-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.result-label {
+.proposal-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5b4fc;
+  flex-shrink: 0;
+}
+
+.proposal-meta {
+  flex: 1;
+}
+
+.proposal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.proposal-subtitle {
+  font-size: 0.75rem;
   color: #9ca3af;
-  font-size: 0.875rem;
 }
 
-.result-value {
-  color: #ffffff;
+.proposal-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.proposal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.proposal-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.proposal-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.proposal-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proposal-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.3);
 }
 
 .next-steps {
