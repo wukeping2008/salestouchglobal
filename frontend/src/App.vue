@@ -71,7 +71,7 @@ const changeLanguage = (code: string) => {
 
           <!-- CTA Button -->
           <a
-            href="https://touch.long-arena.com"
+            href="https://touch.long-arena.com/registerEmail?utm_source=salestouchio&utm_medium=landing&utm_campaign=nav_cta"
             target="_blank"
             rel="noopener"
             class="nav-cta"

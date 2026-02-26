@@ -19,7 +19,7 @@
 
       <div class="cta-buttons">
         <a
-          href="https://touch.long-arena.com"
+          href="https://touch.long-arena.com/registerEmail?utm_source=salestouchio&utm_medium=landing&utm_campaign=hero_trial"
           target="_blank"
           rel="noopener"
           class="btn btn-primary"
