@@ -29,7 +29,7 @@
             <li><a href="#">{{ t('footer.product.features') }}</a></li>
             <li><a href="#">{{ t('footer.product.pricing') }}</a></li>
             <li><a href="#">{{ t('footer.product.demo') }}</a></li>
-            <li><a href="https://longarena.ai/sales-nail/index.html" target="_blank" rel="noopener">{{ t('footer.product.salesNail') }}</a></li>
+            <li><a href="https://www.long-arena.com/" target="_blank" rel="noopener">{{ t('footer.product.salesNail') }}</a></li>
           </ul>
         </div>
 

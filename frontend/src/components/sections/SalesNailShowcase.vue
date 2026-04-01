@@ -16,58 +16,108 @@
               <span class="dot"></span>
               <span class="dot"></span>
             </div>
-            <div class="window-title">SalesNail Smart Page</div>
+            <div class="window-title">SalesNail — B2B Sales Simulation</div>
           </div>
           <div class="window-body">
-            <!-- Left: Input -->
-            <div class="input-panel">
-              <div class="input-label">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
-                <span>Meeting Notes</span>
+            <!-- Left: Team Panel -->
+            <div class="team-panel">
+              <div class="panel-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                <span>COMPETING TEAMS</span>
               </div>
-              <div class="input-placeholder">
-                <div class="typing-line" v-for="i in 4" :key="i" :style="{ width: `${85 - i * 12}%`, animationDelay: `${i * 0.15}s` }"></div>
-              </div>
-              <div class="paste-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Pasted from clipboard</span>
+              <div class="team-list">
+                <div class="team-row team-active">
+                  <div class="team-avatar">A</div>
+                  <div class="team-info">
+                    <div class="team-name">Alpha Team</div>
+                    <div class="team-score-bar"><div class="score-fill" style="width: 78%"></div></div>
+                  </div>
+                  <div class="team-pts">78</div>
+                </div>
+                <div class="team-row">
+                  <div class="team-avatar">B</div>
+                  <div class="team-info">
+                    <div class="team-name">Beta Team</div>
+                    <div class="team-score-bar"><div class="score-fill" style="width: 65%"></div></div>
+                  </div>
+                  <div class="team-pts">65</div>
+                </div>
+                <div class="team-row">
+                  <div class="team-avatar">C</div>
+                  <div class="team-info">
+                    <div class="team-name">Gamma Team</div>
+                    <div class="team-score-bar"><div class="score-fill" style="width: 52%"></div></div>
+                  </div>
+                  <div class="team-pts">52</div>
+                </div>
               </div>
             </div>
 
-            <!-- Arrow -->
-            <div class="arrow-divider">
-              <div class="arrow-pulse">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <!-- Center: Game Board -->
+            <div class="game-board">
+              <div class="round-indicator">
+                <div class="round-dot active"></div>
+                <div class="round-connector"></div>
+                <div class="round-dot active"></div>
+                <div class="round-connector"></div>
+                <div class="round-dot"></div>
+              </div>
+              <div class="round-label">Round 2 / 3</div>
+              <div class="opportunity-grid">
+                <div class="opp-card won">
+                  <div class="opp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg>
+                  </div>
+                  <span>Deal 1</span>
+                </div>
+                <div class="opp-card active">
+                  <div class="opp-icon pulse">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  </div>
+                  <span>Deal 2</span>
+                </div>
+                <div class="opp-card">
+                  <div class="opp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
+                  </div>
+                  <span>Deal 3</span>
+                </div>
+                <div class="opp-card">
+                  <div class="opp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                  </div>
+                  <span>Deal 4</span>
+                </div>
+              </div>
+              <div class="npc-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>NPC: VP of Procurement</span>
               </div>
             </div>
 
-            <!-- Right: Output -->
-            <div class="output-panel">
-              <div class="output-header">
-                <div class="score-ring">
-                  <svg viewBox="0 0 60 60" width="60" height="60">
-                    <circle cx="30" cy="30" r="26" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
-                    <circle cx="30" cy="30" r="26" fill="none" stroke="url(#scoreGrad)" stroke-width="4"
-                            stroke-dasharray="150.8 163.4"
-                            stroke-linecap="round"
-                            transform="rotate(-90 30 30)"
-                            class="score-progress"/>
-                    <defs>
-                      <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#667eea"/>
-                        <stop offset="100%" stop-color="#764ba2"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <span class="score-text">92</span>
+            <!-- Right: Strategy Cards -->
+            <div class="strategy-panel">
+              <div class="panel-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                <span>ACTION CARDS</span>
+              </div>
+              <div class="card-stack">
+                <div class="strategy-card card-played">
+                  <div class="card-type">Resource</div>
+                  <div class="card-name">Deploy Tech Expert</div>
                 </div>
-                <div class="output-meta">
-                  <div class="output-title">Expert Sales Script</div>
-                  <div class="output-tag">Authority Score: 92/100</div>
+                <div class="strategy-card card-ready">
+                  <div class="card-type">Timing</div>
+                  <div class="card-name">Schedule C-Suite Meeting</div>
+                </div>
+                <div class="strategy-card card-ready">
+                  <div class="card-type">Process</div>
+                  <div class="card-name">Customize Proposal</div>
                 </div>
               </div>
-              <div class="output-lines">
-                <div class="output-line" v-for="i in 5" :key="i" :style="{ width: `${90 - i * 8}%`, animationDelay: `${0.6 + i * 0.1}s` }"></div>
+              <div class="ai-scenario-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M12 12v6"/></svg>
+                <span>AI Scenario: Pharma Enterprise</span>
               </div>
             </div>
           </div>
@@ -98,7 +148,7 @@
       <!-- CTA -->
       <div class="salesnail-cta">
         <a
-          href="https://longarena.ai/sales-nail/index.html?utm_source=longarenaai&utm_medium=landing&utm_campaign=salesnail_section"
+          href="https://www.long-arena.com/?utm_source=longarenaai&utm_medium=landing&utm_campaign=salesnail_section"
           target="_blank"
           rel="noopener"
           class="cta-button-primary"
@@ -106,7 +156,7 @@
           <span>{{ t('salesNail.cta') }}</span>
         </a>
         <a
-          href="https://longarena.ai/sales-nail/index.html?utm_source=longarenaai&utm_medium=landing&utm_campaign=salesnail_how"
+          href="https://www.long-arena.com/?utm_source=longarenaai&utm_medium=landing&utm_campaign=salesnail_how"
           target="_blank"
           rel="noopener"
           class="cta-button-secondary"
@@ -233,153 +283,291 @@ const { t } = useI18n()
 
 .window-body {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1.2fr 1fr;
   gap: 1.5rem;
   padding: 2rem;
-  align-items: center;
+  align-items: start;
 }
 
-.input-panel {
+/* Team Panel */
+.team-panel {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
-.input-label {
+.panel-label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #667eea;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.team-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.team-row.team-active {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.25);
+}
+
+.team-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.team-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-name {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.team-score-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  transition: width 1s ease;
+}
+
+.team-pts {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  flex-shrink: 0;
+}
+
+/* Game Board */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.round-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.round-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.round-dot.active {
+  background: #667eea;
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.round-connector {
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.round-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
   letter-spacing: 0.05em;
 }
 
-.input-placeholder {
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.opp-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.opp-card span {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.opp-card.won {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.opp-card.won .opp-icon {
+  color: #22c55e;
+}
+
+.opp-card.won span {
+  color: #22c55e;
+}
+
+.opp-card.active {
+  border-color: rgba(102, 126, 234, 0.4);
+  background: rgba(102, 126, 234, 0.12);
+  animation: cardGlow 2s ease-in-out infinite;
+}
+
+.opp-card.active .opp-icon {
+  color: #fbbf24;
+}
+
+.opp-card.active span {
+  color: #fbbf24;
+}
+
+@keyframes cardGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+  50% { box-shadow: 0 0 16px 4px rgba(102, 126, 234, 0.15); }
+}
+
+.opp-icon {
+  color: #64748b;
+  line-height: 0;
+}
+
+.opp-icon.pulse {
+  animation: iconPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.npc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  border-radius: 6px;
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Strategy Panel */
+.strategy-panel {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
   margin-bottom: 1rem;
 }
 
-.typing-line {
-  height: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
-  animation: shimmer 2s ease-in-out infinite;
+.strategy-card {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
 }
 
-@keyframes shimmer {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
+.strategy-card.card-played {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.25);
+  opacity: 0.6;
 }
 
-.paste-badge {
+.strategy-card.card-ready {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.strategy-card.card-ready:hover {
+  border-color: rgba(102, 126, 234, 0.3);
+  background: rgba(102, 126, 234, 0.08);
+}
+
+.card-type {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.card-name {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.ai-scenario-tag {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 0.75rem;
-  background: rgba(102, 126, 234, 0.15);
-  border: 1px solid rgba(102, 126, 234, 0.25);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: 6px;
-  color: #a5b4fc;
-  font-size: 0.75rem;
-}
-
-.arrow-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow-pulse {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #fff;
-  animation: arrowPulse 2s ease-in-out infinite;
-}
-
-@keyframes arrowPulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
-  50% { transform: scale(1.08); box-shadow: 0 0 20px 8px rgba(102, 126, 234, 0.2); }
-}
-
-.output-panel {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(102, 126, 234, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.output-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.score-ring {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-}
-
-.score-progress {
-  transition: stroke-dasharray 1s ease;
-}
-
-.score-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.output-meta {
-  flex: 1;
-}
-
-.output-title {
-  font-weight: 600;
-  color: #fff;
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
-}
-
-.output-tag {
-  font-size: 0.8rem;
-  color: #667eea;
+  color: #a78bfa;
+  font-size: 0.7rem;
   font-weight: 500;
-}
-
-.output-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.output-line {
-  height: 8px;
-  background: linear-gradient(90deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.15));
-  border-radius: 4px;
-  animation: fadeLineIn 0.5s ease backwards;
-}
-
-@keyframes fadeLineIn {
-  from { opacity: 0; transform: translateX(10px); }
-  to { opacity: 1; transform: translateX(0); }
 }
 
 /* Feature Grid */
@@ -559,8 +747,8 @@ const { t } = useI18n()
     padding: 1.25rem;
   }
 
-  .arrow-divider {
-    transform: rotate(90deg);
+  .game-board {
+    order: -1;
   }
 
   .features-grid {

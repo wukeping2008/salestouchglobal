@@ -44,10 +44,10 @@ const changeLanguage = (code: string) => {
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="https://longarena.ai" class="logo" target="_blank" rel="noopener">
+        <a href="https://www.long-arena.com/" class="logo" target="_blank" rel="noopener">
           <img src="https://longarena.ai/assets/icons/logo/Group.png" alt="LóngArena" class="logo-img" />
           <span class="logo-divider">|</span>
-          <span class="logo-product">SalesTouch</span>
+          <span class="logo-product">LóngArena</span>
         </a>
 
         <div class="nav-actions">
@@ -72,7 +72,7 @@ const changeLanguage = (code: string) => {
 
           <!-- CTA Button -->
           <a
-            href="https://longarena.ai/registerEmail?utm_source=longarenaai&utm_medium=landing&utm_campaign=nav_cta"
+            href="https://www.long-arena.com/?utm_source=longarenaai&utm_medium=landing&utm_campaign=nav_cta"
             target="_blank"
             rel="noopener"
             class="nav-cta"
