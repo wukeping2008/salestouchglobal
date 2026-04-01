@@ -6,10 +6,12 @@ import HeroSection from './components/sections/HeroSection.vue'
 import ProblemStatement from './components/sections/ProblemStatement.vue'
 import PlatformOverview from './components/sections/PlatformOverview.vue'
 import MaxShowcase from './components/sections/MaxShowcase.vue'
+import SalesNailShowcase from './components/sections/SalesNailShowcase.vue'
 import WorkflowJourney from './components/sections/WorkflowJourney.vue'
 import UseCases from './components/sections/UseCases.vue'
 import SocialProof from './components/sections/SocialProof.vue'
 import CTASection from './components/sections/CTASection.vue'
+import ClientsPartners from './components/sections/ClientsPartners.vue'
 import FooterSection from './components/sections/FooterSection.vue'
 import AnimatedSection from './components/shared/AnimatedSection.vue'
 
@@ -17,12 +19,12 @@ const { t, locale } = useI18n()
 
 const isLangMenuOpen = ref(false)
 
-const languages: { code: string; name: string; flag: string }[] = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' }
+const languages: { code: string; name: string }[] = [
+  { code: 'en', name: 'English' },
+  { code: 'zh', name: '中文' },
+  { code: 'fr', name: 'Français' },
+  { code: 'de', name: 'Deutsch' },
+  { code: 'es', name: 'Español' }
 ]
 
 const currentLanguage = computed(() => {
@@ -42,16 +44,16 @@ const changeLanguage = (code: string) => {
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#" class="logo">
-          <span class="logo-main">SalesTouch</span>
-          <span class="logo-suffix">.io</span>
+        <a href="https://longarena.ai" class="logo" target="_blank" rel="noopener">
+          <img src="https://longarena.ai/assets/icons/logo/Group.png" alt="LóngArena" class="logo-img" />
+          <span class="logo-divider">|</span>
+          <span class="logo-product">SalesTouch</span>
         </a>
 
         <div class="nav-actions">
           <!-- Language Switcher -->
           <div class="lang-switcher">
             <button @click="isLangMenuOpen = !isLangMenuOpen" class="lang-toggle">
-              <span class="lang-flag">{{ currentLanguage.flag }}</span>
               <span class="lang-name">{{ currentLanguage.name }}</span>
               <span class="lang-arrow">▾</span>
             </button>
@@ -63,7 +65,6 @@ const changeLanguage = (code: string) => {
                 :class="{ active: locale === lang.code }"
                 class="lang-option"
               >
-                <span class="lang-flag">{{ lang.flag }}</span>
                 <span>{{ lang.name }}</span>
               </button>
             </div>
@@ -71,7 +72,7 @@ const changeLanguage = (code: string) => {
 
           <!-- CTA Button -->
           <a
-            href="https://touch.long-arena.com/registerEmail?utm_source=salestouchio&utm_medium=landing&utm_campaign=nav_cta"
+            href="https://longarena.ai/registerEmail?utm_source=longarenaai&utm_medium=landing&utm_campaign=nav_cta"
             target="_blank"
             rel="noopener"
             class="nav-cta"
@@ -95,6 +96,9 @@ const changeLanguage = (code: string) => {
       <AnimatedSection section-name="max_showcase">
         <MaxShowcase />
       </AnimatedSection>
+      <AnimatedSection section-name="salesnail_showcase">
+        <SalesNailShowcase />
+      </AnimatedSection>
       <AnimatedSection section-name="workflow_journey">
         <WorkflowJourney />
       </AnimatedSection>
@@ -106,6 +110,9 @@ const changeLanguage = (code: string) => {
       </AnimatedSection>
       <AnimatedSection section-name="cta_section">
         <CTASection />
+      </AnimatedSection>
+      <AnimatedSection section-name="clients_partners">
+        <ClientsPartners />
       </AnimatedSection>
     </main>
 
@@ -216,21 +223,35 @@ main {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
 }
 
-.logo-main {
-  color: var(--color-text-primary);
+.logo-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
 }
 
-.logo-suffix {
+.logo-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.logo-product {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .nav-actions {
@@ -343,6 +364,15 @@ main {
 
   .logo {
     font-size: 1.3rem;
+    gap: 0.4rem;
+  }
+
+  .logo-img {
+    height: 22px;
+  }
+
+  .logo-product {
+    font-size: 1rem;
   }
 
   .nav-actions {

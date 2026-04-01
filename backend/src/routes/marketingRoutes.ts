@@ -19,8 +19,8 @@ router.get('/preview/:id', async (req, res) => {
         const { id } = req.params;
         const mockData = {
             firstName: 'John',
-            trialUrl: 'https://salestouch.io/trial',
-            demoUrl: 'https://salestouch.io/demo'
+            trialUrl: 'https://longarena.ai/trial',
+            demoUrl: 'https://longarena.ai/demo'
         };
 
         const html = await marketingService.previewTemplate(id, mockData);

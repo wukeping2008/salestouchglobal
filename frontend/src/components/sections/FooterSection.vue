@@ -4,20 +4,23 @@
       <div class="footer-grid">
         <div class="footer-column brand-column">
           <div class="brand-logo">
-            <span class="logo-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" fill="url(#sparkle-grad)"/>
-                <defs>
-                  <linearGradient id="sparkle-grad" x1="2" y1="2" x2="22" y2="22">
-                    <stop offset="0%" stop-color="#667eea"/>
-                    <stop offset="100%" stop-color="#764ba2"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-            </span>
-            <span class="logo-text">SalesTouch.io</span>
+            <img src="https://longarena.ai/about-us/assets/images/longarena-logo-white.png" alt="LóngArena" class="footer-logo-img" />
           </div>
           <p class="tagline">{{ t('footer.tagline') }}</p>
+          <div class="footer-contact">
+            <a href="mailto:bd@long-arena.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              bd@long-arena.com
+            </a>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/bingbing-bai-89400953/" target="_blank" rel="noopener" class="social-link" title="Bingbing Bai on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/maxmao/" target="_blank" rel="noopener" class="social-link" title="Max Mao on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div class="footer-column">
@@ -26,17 +29,17 @@
             <li><a href="#">{{ t('footer.product.features') }}</a></li>
             <li><a href="#">{{ t('footer.product.pricing') }}</a></li>
             <li><a href="#">{{ t('footer.product.demo') }}</a></li>
-            <li><a href="#">{{ t('footer.product.changelog') }}</a></li>
+            <li><a href="https://longarena.ai/sales-nail/index.html" target="_blank" rel="noopener">{{ t('footer.product.salesNail') }}</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h3 class="column-title">{{ t('footer.company.title') }}</h3>
           <ul class="footer-links">
-            <li><a href="#">{{ t('footer.company.about') }}</a></li>
+            <li><a href="https://longarena.ai/about-us/about.html" target="_blank" rel="noopener">{{ t('footer.company.about') }}</a></li>
             <li><a href="#">{{ t('footer.company.blog') }}</a></li>
             <li><a href="#">{{ t('footer.company.careers') }}</a></li>
-            <li><a href="#">{{ t('footer.company.contact') }}</a></li>
+            <li><a href="mailto:bd@long-arena.com">{{ t('footer.company.contact') }}</a></li>
           </ul>
         </div>
 
@@ -100,10 +103,10 @@ const { t } = useI18n();
   margin-bottom: 1rem;
 }
 
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -116,6 +119,62 @@ const { t } = useI18n();
   font-size: 0.9375rem;
   color: #94a3b8;
   line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #667eea;
+}
+
+.contact-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background: rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+  color: #667eea;
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
 }
 
 .column-title {

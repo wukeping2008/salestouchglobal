@@ -9,7 +9,7 @@
 
         <div class="cta-actions">
           <a
-            href="https://touch.long-arena.com/registerEmail?utm_source=salestouchio&utm_medium=landing&utm_campaign=cta_trial"
+            href="https://longarena.ai/registerEmail?utm_source=longarenaai&utm_medium=landing&utm_campaign=cta_trial"
             target="_blank"
             rel="noopener"
             class="cta-button-primary"
@@ -18,7 +18,7 @@
             {{ t('cta.button') }}
           </a>
           <a
-            href="https://touch.long-arena.com/registerEmail?utm_source=salestouchio&utm_medium=landing&utm_campaign=cta_demo"
+            href="https://longarena.ai/registerEmail?utm_source=longarenaai&utm_medium=landing&utm_campaign=cta_demo"
             target="_blank"
             rel="noopener"
             class="cta-button-secondary"
